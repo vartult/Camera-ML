@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "57983168054",
+    "firebase_url": "https://cameraml.firebaseio.com",
+    "project_id": "cameraml",
+    "storage_bucket": "cameraml.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57983168054:android:5de56f5a433009bb",
+        "android_client_info": {
+          "package_name": "com.example.nitya.cameraml"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57983168054-ja85j4ti5n6u8l470jun8qs666e0vfc4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nitya.cameraml",
+            "certificate_hash": "6044194bf9e9efede48cce103c094c69917be006"
+          }
+        },
+        {
+          "client_id": "57983168054-obh1e2l9ll5g377nv0fdkvkc39mfping.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlknFhgB0TmXEhAh8xpiIgFMoiVvVQdSU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57983168054-obh1e2l9ll5g377nv0fdkvkc39mfping.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

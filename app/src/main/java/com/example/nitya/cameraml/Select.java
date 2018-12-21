@@ -40,151 +40,49 @@ import java.util.List;
 public class Select extends AppCompatActivity {
 
     int flag;
-    CameraView cameraView;
-    GraphicOverlay graphicOverlay;
-    Button button;
+    ImageView imageView;
 
-    @Override
-    protected void onResume() {
-        super.onResume();
 
-        cameraView.start();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        cameraView.stop();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
-        cameraView=findViewById(R.id.camera);
-        graphicOverlay=findViewById(R.id.graphic_overlay);
-        button=findViewById(R.id.dot);
+        imageView=findViewById(R.id.image);
 
         Intent intent=getIntent();
         flag=intent.getIntExtra("flag",0);
         Log.i("flagggggg111111111",String.valueOf(flag));
 
-
-        button.setOnClickListener(new View.OnClickListener() {
-          @Override
-            public void onClick(View v) {
-
-              if(ActivityCompat.checkSelfPermission(Select.this,Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                  ActivityCompat.requestPermissions(Select.this, new String[]{
-                          Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
-              }
-                          else{
-                  //you camera action as you want
-                  // }
-                  cameraView.start();
-                  cameraView.captureImage();
-                  graphicOverlay.clear();
-              }
-
-
-           }
-        });
-
-        cameraView.addCameraKitListener(new CameraKitEventListener() {
-            @Override
-            public void onEvent(CameraKitEvent cameraKitEvent) {
-
-            }
-
-            @Override
-            public void onError(CameraKitError cameraKitError) {
-
-            }
-
-            @Override
-            public void onImage(CameraKitImage cameraKitImage) {
-
-                Bitmap bitmap=cameraKitImage.getBitmap();
-                bitmap=Bitmap.createScaledBitmap(bitmap,cameraView.getWidth(),cameraView.getHeight(),false);
-                cameraView.stop();
-
-                recognizeText(bitmap);
-
-            }
-
-            @Override
-            public void onVideo(CameraKitVideo cameraKitVideo) {
-
-            }
-        });
+        Intent cameraIntent=new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
+        startActivityForResult(cameraIntent,100);
 
     }
 
-    private void recognizeText(Bitmap bitmap) {
 
-        FirebaseVisionImage image=FirebaseVisionImage.fromBitmap(bitmap);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 100 && resultCode == RESULT_OK) {
+            Bitmap picture = (Bitmap) data.getExtras().get("data");//this is your bitmap image and now you can do whatever you want with this
+            imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
 
-        FirebaseVisionCloudTextRecognizerOptions options=
-                new FirebaseVisionCloudTextRecognizerOptions.Builder()
-                .setLanguageHints(Arrays.asList("en"))
-                .build();
-
-        FirebaseVisionTextRecognizer textRecognizer=FirebaseVision.getInstance().getCloudTextRecognizer(options);
-
-        textRecognizer.processImage(image)
-                .addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
-                    @Override
-                    public void onSuccess(FirebaseVisionText firebaseVisionText) {
-
-                        if(firebaseVisionText!=null)
-                            drawTextResult(firebaseVisionText);
-                        Toast.makeText(Select.this, "caught", Toast.LENGTH_SHORT).show();
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-
-                Log.i("Errorrrrrrrrrrr",e.getMessage());
-
+            if (flag==1){
+                //text recognition
             }
-        });
-    }
 
-    private void drawTextResult(FirebaseVisionText firebaseVisionText) {
+            if (flag==2){
+                //label images
+            }
 
-        Log.i("flaggggg","yes here");
+            if (flag==3){
+                //recognize face
+            }
 
-
-        List<FirebaseVisionText.TextBlock> blocks=firebaseVisionText.getTextBlocks();
-
-        if(blocks.size()==0){
-            Toast.makeText(this,"No TextFound!",Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        graphicOverlay.clear();
-
-        for(int i=0;i<blocks.size();i++) {
-
-            List<FirebaseVisionText.Line> lines = blocks.get(i).getLines();
-
-            for (int j = 0; j < lines.size(); j++) {
-
-                List<FirebaseVisionText.Element> elements = lines.get(j).getElements();
-
-                for (int k = 0; k < elements.size(); k++) {
-
-                    TextGraphic textGraphic = new TextGraphic(graphicOverlay, elements.get(k));
-                    graphicOverlay.add(textGraphic);
-
-                    Log.i("flaggggyyyyy",elements.get(k).toString());
-                }
+            if(flag==4){
+                //scan barcode
             }
         }
-
-
     }
 }

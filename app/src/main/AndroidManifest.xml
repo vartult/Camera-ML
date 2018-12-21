@@ -3,6 +3,7 @@
     package="com.example.nitya.cameraml">
 
     <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,7 @@
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-            android:value="ocr" />
+            android:value="text" />
 
         <activity android:name=".Select"></activity>
     </application>

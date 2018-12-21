@@ -5,11 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Select"
-    android:layout_margin="20dp">
+    android:background="@color/colorPrimaryDark">
 
-    <ImageView
+    <com.wonderkiln.camerakit.CameraView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.wonderkiln.camerakit.CameraView>
+
+    <com.example.nitya.cameraml.Helper.GraphicOverlay
+        android:id="@+id/graphic_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/dot"
+        android:text="Capture"
+        android:layout_gravity="bottom|center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/show"/>
+        android:layout_height="wrap_content" />
+
 
 </FrameLayout>

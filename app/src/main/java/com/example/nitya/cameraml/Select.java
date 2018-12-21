@@ -84,5 +84,12 @@ public class Select extends AppCompatActivity {
                 //scan barcode
             }
         }
+        else{
+            //if image not found jump back to main home page with a toast
+            Toast.makeText(getBaseContext(),"Error in Image Fetching",Toast.LENGTH_LONG).show();
+            Intent select=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(select);
+
+        }
     }
 }

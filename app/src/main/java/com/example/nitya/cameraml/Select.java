@@ -41,8 +41,10 @@ public class Select extends AppCompatActivity {
 
     int flag;
     ImageView imageView;
+
     TextRecognize textRecognize;
 
+    GraphicOverlay graphicOverlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class Select extends AppCompatActivity {
         setContentView(R.layout.activity_select);
 
         imageView=findViewById(R.id.image);
+        graphicOverlay=findViewById(R.id.graphic);
 
         Intent intent=getIntent();
         flag=intent.getIntExtra("flag",0);
@@ -67,11 +70,11 @@ public class Select extends AppCompatActivity {
         if (requestCode == 100 && resultCode == RESULT_OK) {
             Bitmap picture = (Bitmap) data.getExtras().get("data");
             //picture=Bitmap.createScaledBitmap(picture,cameraView.getWidth(),cameraView.getHeight(),false);//this is your bitmap image and now you can do whatever you want with this
-            //imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
+            imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
 
             if (flag==1){
                 //text recognition
-                TextRecognize.recognizeText(picture);
+                TextRecognize.recognizeText(graphicOverlay,picture);
             }
 
             if (flag==2){
@@ -80,6 +83,9 @@ public class Select extends AppCompatActivity {
 
             if (flag==3){
                 //recognize face
+
+                FaceDetector obj=new FaceDetector();
+                obj.detect(graphicOverlay,picture);
             }
 
             if(flag==4){

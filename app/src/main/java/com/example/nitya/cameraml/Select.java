@@ -41,9 +41,10 @@ public class Select extends AppCompatActivity {
 
     int flag;
     ImageView imageView;
+
+    TextRecognize textRecognize;
+
     GraphicOverlay graphicOverlay;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,13 +68,13 @@ public class Select extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100 && resultCode == RESULT_OK) {
-            Bitmap picture = (Bitmap) data.getExtras().get("data");//this is your bitmap image and now you can do whatever you want with this
+            Bitmap picture = (Bitmap) data.getExtras().get("data");
+            //picture=Bitmap.createScaledBitmap(picture,cameraView.getWidth(),cameraView.getHeight(),false);//this is your bitmap image and now you can do whatever you want with this
             imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
 
             if (flag==1){
                 //text recognition
-
-                TextRecognize.recognizeText(picture);
+                TextRecognize.recognizeText(graphicOverlay,picture);
             }
 
             if (flag==2){

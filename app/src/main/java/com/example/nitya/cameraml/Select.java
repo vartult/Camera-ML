@@ -41,6 +41,7 @@ public class Select extends AppCompatActivity {
 
     int flag;
     ImageView imageView;
+    GraphicOverlay graphicOverlay;
 
 
 
@@ -50,6 +51,7 @@ public class Select extends AppCompatActivity {
         setContentView(R.layout.activity_select);
 
         imageView=findViewById(R.id.image);
+        graphicOverlay=findViewById(R.id.graphic);
 
         Intent intent=getIntent();
         flag=intent.getIntExtra("flag",0);
@@ -70,6 +72,8 @@ public class Select extends AppCompatActivity {
 
             if (flag==1){
                 //text recognition
+
+                TextRecognize.recognizeText(picture);
             }
 
             if (flag==2){
@@ -78,6 +82,9 @@ public class Select extends AppCompatActivity {
 
             if (flag==3){
                 //recognize face
+
+                FaceDetector obj=new FaceDetector();
+                obj.detect(graphicOverlay,picture);
             }
 
             if(flag==4){

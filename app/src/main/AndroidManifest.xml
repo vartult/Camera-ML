@@ -25,7 +25,7 @@
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-            android:value="text" />
+            android:value="text,face" />
 
         <activity android:name=".Select"
             android:screenOrientation="portrait">

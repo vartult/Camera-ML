@@ -4,11 +4,15 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,7 +38,12 @@ import com.wonderkiln.camerakit.CameraKitImage;
 import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 public class Select extends AppCompatActivity {
@@ -42,24 +51,40 @@ public class Select extends AppCompatActivity {
     int flag;
     ImageView imageView;
 
-    TextRecognize textRecognize;
-
     GraphicOverlay graphicOverlay;
+
+    private String pictureImagePath = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
-        imageView=findViewById(R.id.image);
-        graphicOverlay=findViewById(R.id.graphic);
+        imageView = findViewById(R.id.image);
+        graphicOverlay = findViewById(R.id.graphic);
 
-        Intent intent=getIntent();
-        flag=intent.getIntExtra("flag",0);
-        Log.i("flagggggg111111111",String.valueOf(flag));
+        Intent intent = getIntent();
+        flag = intent.getIntExtra("flag", 0);
+        Log.i("flagggggg111111111", String.valueOf(flag));
 
-        Intent cameraIntent=new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
-        startActivityForResult(cameraIntent,100);
+
+
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = timeStamp + ".jpg";
+        File storageDir = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES);
+        pictureImagePath = storageDir.getAbsolutePath() + "/" + imageFileName;
+        File file = new File(pictureImagePath);
+        Uri outputFileUri = Uri.fromFile(file);
+
+
+
+        Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
+
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+
+        startActivityForResult(cameraIntent, 100);
 
     }
 
@@ -68,9 +93,12 @@ public class Select extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100 && resultCode == RESULT_OK) {
-            Bitmap picture = (Bitmap) data.getExtras().get("data");
-            //picture=Bitmap.createScaledBitmap(picture,cameraView.getWidth(),cameraView.getHeight(),false);//this is your bitmap image and now you can do whatever you want with this
-            imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
+
+
+                File imgFile = new File(pictureImagePath);
+
+                    Bitmap picture = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+            imageView.setImageBitmap(picture);
 
             if (flag==1){
                 //text recognition

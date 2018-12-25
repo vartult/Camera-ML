@@ -53,9 +53,6 @@ public class Select extends AppCompatActivity {
 
     GraphicOverlay graphicOverlay;
 
-    private String pictureImagePath = "";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,11 +91,25 @@ public class Select extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100 && resultCode == RESULT_OK) {
 
+            Bitmap picture = (Bitmap) data.getExtras().get("data");
+            //picture.setPixel(5312,2988,1);
+            //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
+            //Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+            final int maxSize = 2048;
+            int outWidth;
+            int outHeight;
+            int inWidth = picture.getWidth();
+            int inHeight = picture.getHeight();
+            if(inWidth > inHeight){
+                outWidth = maxSize;
+                outHeight = (inHeight * maxSize) / inWidth;
+            } else {
+                outHeight = maxSize;
+                outWidth = (inWidth * maxSize) / inHeight;
+            }
 
-                File imgFile = new File(pictureImagePath);
-
-                    Bitmap picture = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
-            imageView.setImageBitmap(picture);
+            picture=Bitmap.createScaledBitmap(picture,outWidth,outHeight,false);//this is your bitmap image and now you can do whatever you want with this
+            imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
 
             if (flag==1){
                 //text recognition

@@ -65,21 +65,9 @@ public class Select extends AppCompatActivity {
         flag = intent.getIntExtra("flag", 0);
         Log.i("flagggggg111111111", String.valueOf(flag));
 
-
-
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = timeStamp + ".jpg";
-        File storageDir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES);
-        pictureImagePath = storageDir.getAbsolutePath() + "/" + imageFileName;
-        File file = new File(pictureImagePath);
-        Uri outputFileUri = Uri.fromFile(file);
-
-
-
+        
         Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
 
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
 
         startActivityForResult(cameraIntent, 100);
 

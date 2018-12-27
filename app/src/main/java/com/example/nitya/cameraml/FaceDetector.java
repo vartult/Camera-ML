@@ -1,9 +1,12 @@
 package com.example.nitya.cameraml;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.nitya.cameraml.Helper.GraphicOverlay;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -19,11 +22,14 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceLandmark;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FaceDetector {
 
-    public void detect(final GraphicOverlay graphicOverlay, Bitmap bitmap) {
+    ArrayList<FirebaseVisionFace> arrayList=new ArrayList<>();
+
+    public void detect(final GraphicOverlay graphicOverlay, Bitmap bitmap, final Button button) {
 
 
         FirebaseVisionFaceDetectorOptions highAccuracy =
@@ -45,7 +51,7 @@ public class FaceDetector {
                             public void onSuccess(List<FirebaseVisionFace> firebaseVisionFaces) {
                                 Log.i("Wohhoo","success");
 
-                                processFaceList(graphicOverlay,firebaseVisionFaces);
+                                processFaceList(graphicOverlay,firebaseVisionFaces,button);
 
                             }
                         })
@@ -56,11 +62,13 @@ public class FaceDetector {
 
                             }
                         });
+
     }
 
-    private void processFaceList(GraphicOverlay graphicOverlay,List<FirebaseVisionFace> faces) {
+    private void processFaceList(GraphicOverlay graphicOverlay,List<FirebaseVisionFace> faces,Button button) {
 
         for (FirebaseVisionFace face : faces) {
+            arrayList.add(face);
             Log.i("wohhhooo2","enterd");
             Rect bounds = face.getBoundingBox();
 
@@ -104,7 +112,18 @@ public class FaceDetector {
             if (face.getTrackingId() != FirebaseVisionFace.INVALID_ID) {
                 int id = face.getTrackingId();
             }
+
         }
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Intent view = new Intent(FaceDetector.this,ViewIt.class);
+                //view.putExtra("list",arrayList);
+
+            }
+        });
 
 
     }

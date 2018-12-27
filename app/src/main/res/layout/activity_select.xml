@@ -17,5 +17,17 @@
        android:layout_height="match_parent"
        android:id="@+id/graphic"/>
 
+   <Button
+       android:id="@+id/viewall"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center|bottom"
+       android:textSize="15dp"
+       android:textStyle="bold"
+       android:text="View All!"
+       android:paddingLeft="50dp"
+       android:background="@drawable/mybutton"
+       android:paddingRight="50dp"/>
+
 
 </FrameLayout>

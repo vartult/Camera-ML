@@ -42,7 +42,7 @@ public class Select extends AppCompatActivity {
     int flag;
     ImageView imageView;
     GraphicOverlay graphicOverlay;
-
+    Button viewall;
 
 
     @Override
@@ -52,6 +52,7 @@ public class Select extends AppCompatActivity {
 
         imageView=findViewById(R.id.image);
         graphicOverlay=findViewById(R.id.graphic);
+        viewall=findViewById(R.id.viewall);
 
         Intent intent=getIntent();
         flag=intent.getIntExtra("flag",0);
@@ -84,7 +85,7 @@ public class Select extends AppCompatActivity {
                 //recognize face
 
                 FaceDetector obj=new FaceDetector();
-                obj.detect(graphicOverlay,picture);
+                obj.detect(graphicOverlay,picture,viewall);
             }
 
             if(flag==4){

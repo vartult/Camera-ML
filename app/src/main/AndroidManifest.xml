@@ -3,11 +3,13 @@
     package="com.example.nitya.cameraml">
 
     <uses-feature android:name="android.hardware.camera" />
+    <!--
 <<<<<<< HEAD
 =======
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
->>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8
+    -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- >>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8 -->
 
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -30,21 +32,23 @@
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-            android:value="ocr" />
+            android:value="ocr,label,image" />
 
-<<<<<<< HEAD
+        <!-- <<<<<<< HEAD -->
         <activity
             android:name=".Select"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".ViewIt"></activity>
-=======
+            android:screenOrientation="portrait" />
+        <activity android:name=".ViewIt" />
+        <!--
+    =======
         <activity android:name=".Select"
             android:screenOrientation="portrait">
 
         </activity>
+        -->
 
->>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8
+
+        <!-- >>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8 -->
     </application>
-
 
 </manifest>

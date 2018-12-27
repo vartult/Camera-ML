@@ -52,9 +52,12 @@ public class Select extends AppCompatActivity {
     ImageView imageView;
 
     GraphicOverlay graphicOverlay;
+//<<<<<<< HEAD
     Button viewall;
+//=======
 
     private String pictureImagePath = "";
+//>>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8
 
 
     @Override
@@ -62,10 +65,11 @@ public class Select extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
+//<<<<<<< HEAD
         imageView=findViewById(R.id.image);
         graphicOverlay=findViewById(R.id.graphic);
         viewall=findViewById(R.id.viewall);
-
+//=======
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
 
@@ -83,6 +87,7 @@ public class Select extends AppCompatActivity {
         File file = new File(pictureImagePath);
         Uri outputFileUri = Uri.fromFile(file);
 
+//>>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8
 
 
         Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
@@ -112,6 +117,9 @@ public class Select extends AppCompatActivity {
 
             if (flag==2){
                 //label images
+
+                LabelingImages obj=new LabelingImages();
+                obj.label(picture);
             }
 
             if (flag==3){

@@ -51,6 +51,12 @@ public class Barcode {
                             String rawValue = barcode.getRawValue();
 
                             int valueType = barcode.getValueType();
+
+                            Log.e("Log", "QR Code: "+barcode.getDisplayValue()); //Returns barcode value in a user-friendly format.
+                            Log.e("Log", "Raw Value: "+barcode.getRawValue());//Returns barcode value as it was encoded in the barcode.
+                            Log.e("Log", "Code Type: "+barcode.getValueType());
+
+
                             // See API reference for complete list of supported types
                             switch (valueType) {
                                 case FirebaseVisionBarcode.TYPE_WIFI:

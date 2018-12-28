@@ -91,7 +91,7 @@ public class Select extends AppCompatActivity {
             //picture.setPixel(5312,2988,1);
             //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
             //Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-            final int maxSize = 2048;
+            final int maxSize =960;
             int outWidth;
             int outHeight;
             int inWidth = picture.getWidth();
@@ -128,6 +128,7 @@ public class Select extends AppCompatActivity {
 
             if(flag==4){
                 //scan barcode
+                Barcode.scanBarcodes(picture,graphicOverlay);
             }
         }
         else{

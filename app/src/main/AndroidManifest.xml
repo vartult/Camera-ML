@@ -34,21 +34,12 @@
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
             android:value="ocr,label,image" />
 
-        <!-- <<<<<<< HEAD -->
         <activity
             android:name=".Select"
             android:screenOrientation="portrait" />
         <activity android:name=".ViewIt" />
-        <!--
-    =======
-        <activity android:name=".Select"
-            android:screenOrientation="portrait">
-
-        </activity>
-        -->
 
 
-        <!-- >>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8 -->
     </application>
 
 </manifest>

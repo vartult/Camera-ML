@@ -52,12 +52,21 @@ public class Select extends AppCompatActivity {
     ImageView imageView;
 
     GraphicOverlay graphicOverlay;
+//<<<<<<< HEAD
+    Button viewall;
+//=======
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
+//<<<<<<< HEAD
+        imageView=findViewById(R.id.image);
+        graphicOverlay=findViewById(R.id.graphic);
+        viewall=findViewById(R.id.viewall);
+//=======
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
 
@@ -65,7 +74,6 @@ public class Select extends AppCompatActivity {
         flag = intent.getIntExtra("flag", 0);
         Log.i("flagggggg111111111", String.valueOf(flag));
 
-        
         Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
 
 
@@ -106,13 +114,16 @@ public class Select extends AppCompatActivity {
 
             if (flag==2){
                 //label images
+
+                LabelingImages obj=new LabelingImages();
+                obj.label(picture);
             }
 
             if (flag==3){
                 //recognize face
 
                 FaceDetector obj=new FaceDetector();
-                obj.detect(graphicOverlay,picture);
+                obj.detect(graphicOverlay,picture,viewall);
             }
 
             if(flag==4){

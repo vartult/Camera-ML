@@ -1,7 +1,9 @@
 package com.example.nitya.cameraml;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,6 +14,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,12 +45,13 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
 public class Select extends AppCompatActivity {
-
+    private static final int PERMISSION_REQUESTS = 1;
     int flag;
     ImageView imageView;
 
@@ -61,7 +65,6 @@ public class Select extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
-
 //<<<<<<< HEAD
         imageView=findViewById(R.id.image);
         graphicOverlay=findViewById(R.id.graphic);
@@ -70,14 +73,22 @@ public class Select extends AppCompatActivity {
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
 
-        Intent intent = getIntent();
-        flag = intent.getIntExtra("flag", 0);
-        Log.i("flagggggg111111111", String.valueOf(flag));
-
-        Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
 
 
-        startActivityForResult(cameraIntent, 100);
+
+
+
+        if (allPermissionsGranted()) {
+            Intent intent = getIntent();
+            flag = intent.getIntExtra("flag", 0);
+            Log.i("flagggggg111111111", String.valueOf(flag));
+            Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
+            startActivityForResult(cameraIntent, 100);
+
+        }
+        else {
+            getRuntimePermissions();
+        }
 
     }
 
@@ -91,7 +102,7 @@ public class Select extends AppCompatActivity {
             //picture.setPixel(5312,2988,1);
             //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
             //Bitmap bitmap = BitmapFactory.decodeFile(filePath);
-            final int maxSize = 2048;
+            final int maxSize =960;
             int outWidth;
             int outHeight;
             int inWidth = picture.getWidth();
@@ -128,6 +139,7 @@ public class Select extends AppCompatActivity {
 
             if(flag==4){
                 //scan barcode
+                Barcode.scanBarcodes(picture,graphicOverlay);
             }
         }
         else{
@@ -137,5 +149,61 @@ public class Select extends AppCompatActivity {
             startActivity(select);
 
         }
+    }
+    private boolean allPermissionsGranted() {
+        for (String permission : getRequiredPermissions()) {
+            if (!isPermissionGranted(this, permission)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    private void getRuntimePermissions() {
+        List allNeededPermissions = new ArrayList<>();
+        for (String permission : getRequiredPermissions()) {
+            if (!isPermissionGranted(this, permission)) {
+                allNeededPermissions.add(permission);
+            }
+        }
+
+        if (!allNeededPermissions.isEmpty()) {
+            ActivityCompat.requestPermissions(
+                    this, (String[]) allNeededPermissions.toArray(new String[0]), PERMISSION_REQUESTS);
+        }
+    }
+    private String[] getRequiredPermissions() {
+        try {
+            PackageInfo info =
+                    this.getPackageManager()
+                            .getPackageInfo(this.getPackageName(), PackageManager.GET_PERMISSIONS);
+            String[] ps = info.requestedPermissions;
+            if (ps != null && ps.length > 0) {
+                return ps;
+            } else {
+                return new String[0];
+            }
+        } catch (Exception e) {
+            return new String[0];
+        }
+    }
+
+    public void onRequestPermissionsResult(
+            int requestCode, String[] permissions, int[] grantResults) {
+        if (allPermissionsGranted()) {
+            Intent intent = getIntent();
+            flag = intent.getIntExtra("flag", 0);
+            Log.i("flagggggg111111111", String.valueOf(flag));
+            Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
+            startActivityForResult(cameraIntent, 100);
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    private static boolean isPermissionGranted(Context context, String permission) {
+        if (ContextCompat.checkSelfPermission(context, permission)
+                == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        }
+        return false;
     }
 }

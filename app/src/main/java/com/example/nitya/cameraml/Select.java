@@ -109,7 +109,7 @@ public class Select extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == 100 && resultCode == RESULT_OK) {
             Bitmap picture=null;
 
@@ -178,6 +178,7 @@ public class Select extends AppCompatActivity {
             startActivity(select);
 
         }
+        super.onActivityResult(requestCode, resultCode, data);
     }
     private boolean allPermissionsGranted() {
         for (String permission : getRequiredPermissions()) {

@@ -55,7 +55,7 @@ public class Select extends AppCompatActivity {
     private static final int PERMISSION_REQUESTS = 1;
     int flag;
     ImageView imageView;
-    private Uri mImageUri;
+    private String pictureImagePath="";
     GraphicOverlay graphicOverlay;
 //<<<<<<< HEAD
     Button viewall;
@@ -65,38 +65,25 @@ public class Select extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
-//<<<<<<< HEAD
-        imageView=findViewById(R.id.image);
-        graphicOverlay=findViewById(R.id.graphic);
-        viewall=findViewById(R.id.viewall);
-//=======
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
 
-
-
-
-
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = timeStamp + ".jpg";
+        File storageDir = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES);
+        pictureImagePath = storageDir.getAbsolutePath() + "/" + imageFileName;
+        File file = new File(pictureImagePath);
+        Uri outputFileUri = FileProvider.getUriForFile(getApplicationContext(),
+                BuildConfig.APPLICATION_ID + ".provider",
+                file);
 
         if (allPermissionsGranted()) {
             Intent intent = getIntent();
             flag = intent.getIntExtra("flag", 0);
             Log.i("flagggggg111111111", String.valueOf(flag));
             Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
-            File photo = null;
-            try
-            {
-                // place where to store camera taken picture
-                photo = this.createTemporaryFile("picture", ".jpg");
-                photo.delete();
-            }
-            catch(Exception e)
-            {
-                Log.v("yes", "Can't create file to take picture!");
-
-            }
-            mImageUri = Uri.fromFile(photo);
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, mImageUri);
+            cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
             startActivityForResult(cameraIntent, 100);
 
         }
@@ -111,7 +98,9 @@ public class Select extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if (requestCode == 100 && resultCode == RESULT_OK) {
-            Bitmap picture=null;
+            File imgFile = new  File(pictureImagePath);
+            Bitmap picture = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+            imageView.setImageBitmap(picture);
 
             /*Bitmap picture = (Bitmap) data.getExtras().get("data");
             //picture.setPixel(5312,2988,1);
@@ -134,18 +123,6 @@ public class Select extends AppCompatActivity {
             imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
 */
 
-            this.getContentResolver().notifyChange(mImageUri, null);
-            ContentResolver cr = this.getContentResolver();
-            try
-            {
-                picture = android.provider.MediaStore.Images.Media.getBitmap(cr, mImageUri);
-                imageView.setImageBitmap(picture);
-            }
-            catch (Exception e)
-            {
-                Toast.makeText(this, "Failed to load", Toast.LENGTH_SHORT).show();
-                Log.d("shit", "Failed to load", e);
-            }
 
             if (flag==1){
                 //text recognition
@@ -237,14 +214,5 @@ public class Select extends AppCompatActivity {
         return false;
     }
 
-    private File createTemporaryFile(String part, String ext) throws Exception
-    {
-        File tempDir= Environment.getExternalStorageDirectory();
-        tempDir=new File(tempDir.getAbsolutePath()+"/.temp/");
-        if(!tempDir.exists())
-        {
-            tempDir.mkdirs();
-        }
-        return File.createTempFile(part, ext, tempDir);
-    }
+
 }

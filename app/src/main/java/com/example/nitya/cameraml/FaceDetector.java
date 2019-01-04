@@ -115,7 +115,7 @@ public class FaceDetector {
 
         }
 
-        button.setOnClickListener(new View.OnClickListener() {
+        /*button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -123,7 +123,7 @@ public class FaceDetector {
                 //view.putExtra("list",arrayList);
 
             }
-        });
+        });*/
 
 
     }

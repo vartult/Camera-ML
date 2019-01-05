@@ -43,7 +43,10 @@ import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -55,7 +58,7 @@ public class Select extends AppCompatActivity {
     private static final int PERMISSION_REQUESTS = 1;
     int flag;
     ImageView imageView;
-    private Uri mImageUri;
+    String mCurrentPhotoPath="";
     GraphicOverlay graphicOverlay;
 //<<<<<<< HEAD
     Button viewall;
@@ -65,15 +68,8 @@ public class Select extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
-//<<<<<<< HEAD
-        imageView=findViewById(R.id.image);
-        graphicOverlay=findViewById(R.id.graphic);
-        viewall=findViewById(R.id.viewall);
-//=======
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
-
-
 
 
 
@@ -82,22 +78,32 @@ public class Select extends AppCompatActivity {
             Intent intent = getIntent();
             flag = intent.getIntExtra("flag", 0);
             Log.i("flagggggg111111111", String.valueOf(flag));
-            Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
-            File photo = null;
-            try
-            {
-                // place where to store camera taken picture
-                photo = this.createTemporaryFile("picture", ".jpg");
-                photo.delete();
-            }
-            catch(Exception e)
-            {
-                Log.v("yes", "Can't create file to take picture!");
 
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            // Ensure that there's a camera activity to handle the intent
+            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                // Create the File where the photo should go
+                File photoFile = null;
+                try {
+                    photoFile = createImageFile();
+                } catch (IOException ex) {
+                    // Error occurred while creating the File
+                    return;
+                }
+                // Continue only if the File was successfully created
+                if (photoFile != null) {
+                    Uri photoURI = null;
+                    try {
+                        photoURI = FileProvider.getUriForFile(getApplicationContext(),
+                                BuildConfig.APPLICATION_ID + ".provider",
+                                createImageFile());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                    startActivityForResult(takePictureIntent, 100);
+                }
             }
-            mImageUri = Uri.fromFile(photo);
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, mImageUri);
-            startActivityForResult(cameraIntent, 100);
 
         }
         else {
@@ -109,10 +115,10 @@ public class Select extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 100 && resultCode == RESULT_OK) {
-            Bitmap picture=null;
 
+        if (requestCode == 100 && resultCode == RESULT_OK) {
+
+            Bitmap picture;
             /*Bitmap picture = (Bitmap) data.getExtras().get("data");
             //picture.setPixel(5312,2988,1);
             //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
@@ -132,19 +138,16 @@ public class Select extends AppCompatActivity {
 
             picture=Bitmap.createScaledBitmap(picture,outWidth,outHeight,false);//this is your bitmap image and now you can do whatever you want with this
             imageView.setImageBitmap(picture); //for example I put bmp in an ImageView
-*/
 
-            this.getContentResolver().notifyChange(mImageUri, null);
-            ContentResolver cr = this.getContentResolver();
-            try
-            {
-                picture = android.provider.MediaStore.Images.Media.getBitmap(cr, mImageUri);
+*/
+            Uri imageUri = Uri.parse(mCurrentPhotoPath);
+            File file = new File(imageUri.getPath());
+            try {
+                InputStream ims = new FileInputStream(file);
+                picture=BitmapFactory.decodeStream(ims);
                 imageView.setImageBitmap(picture);
-            }
-            catch (Exception e)
-            {
-                Toast.makeText(this, "Failed to load", Toast.LENGTH_SHORT).show();
-                Log.d("shit", "Failed to load", e);
+            } catch (FileNotFoundException e) {
+                return;
             }
 
             if (flag==1){
@@ -178,6 +181,7 @@ public class Select extends AppCompatActivity {
             startActivity(select);
 
         }
+        super.onActivityResult(requestCode, resultCode, data);
     }
     private boolean allPermissionsGranted() {
         for (String permission : getRequiredPermissions()) {
@@ -236,14 +240,21 @@ public class Select extends AppCompatActivity {
         return false;
     }
 
-    private File createTemporaryFile(String part, String ext) throws Exception
-    {
-        File tempDir= Environment.getExternalStorageDirectory();
-        tempDir=new File(tempDir.getAbsolutePath()+"/.temp/");
-        if(!tempDir.exists())
-        {
-            tempDir.mkdirs();
-        }
-        return File.createTempFile(part, ext, tempDir);
+    private File createImageFile() throws IOException {
+        // Create an image file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+        File storageDir = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_DCIM), "Camera");
+        File image = File.createTempFile(
+                imageFileName,  /* prefix */
+                ".jpg",         /* suffix */
+                storageDir      /* directory */
+        );
+
+        // Save a file: path for use with ACTION_VIEW intents
+        mCurrentPhotoPath = "file:" + image.getAbsolutePath();
+        return image;
     }
+
 }

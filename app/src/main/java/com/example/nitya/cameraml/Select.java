@@ -77,7 +77,7 @@ public class Select extends AppCompatActivity {
         if (allPermissionsGranted()) {
             Intent intent = getIntent();
             flag = intent.getIntExtra("flag", 0);
-            Log.i("flagggggg111111111", String.valueOf(flag));
+            Log.i("flagggggg", String.valueOf(flag));
 
             Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             // Ensure that there's a camera activity to handle the intent

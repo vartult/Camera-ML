@@ -63,7 +63,7 @@ public class Select extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
-        cameraView = findViewById(R.id.camera);
+        cameraView = findViewById(R.id.cam);
         graphicOverlay = findViewById(R.id.graphic);
         button = findViewById(R.id.viewall);
 

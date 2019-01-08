@@ -23,6 +23,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.camerakit:camerakit:1.0.0-beta3.10'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.firebase:firebase-ml-vision:18.0.2'
     implementation 'me.rishabhkhanna:CustomToggle:1.0.0'

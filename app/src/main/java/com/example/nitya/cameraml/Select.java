@@ -75,10 +75,17 @@ public class Select extends AppCompatActivity {
         cameraView.stop();
     }
 
+<<<<<<< HEAD
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
+=======
+        if (allPermissionsGranted()) {
+            Intent intent = getIntent();
+            flag = intent.getIntExtra("flag", 0);
+            Log.i("flagggggg", String.valueOf(flag));
+>>>>>>> 0c1034d5d1aeb9f8a5aa5fd849cb9f739c85d6f1
 
         cameraView = findViewById(R.id.camera);
         graphicOverlay = findViewById(R.id.graphic);

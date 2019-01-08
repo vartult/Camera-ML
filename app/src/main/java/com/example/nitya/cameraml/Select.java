@@ -1,22 +1,14 @@
 package com.example.nitya.cameraml;
 
 import android.Manifest;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,16 +34,7 @@ import com.wonderkiln.camerakit.CameraKitImage;
 import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 public class Select extends AppCompatActivity {
@@ -75,17 +58,10 @@ public class Select extends AppCompatActivity {
         cameraView.stop();
     }
 
-<<<<<<< HEAD
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
-=======
-        if (allPermissionsGranted()) {
-            Intent intent = getIntent();
-            flag = intent.getIntExtra("flag", 0);
-            Log.i("flagggggg", String.valueOf(flag));
->>>>>>> 0c1034d5d1aeb9f8a5aa5fd849cb9f739c85d6f1
 
         cameraView = findViewById(R.id.camera);
         graphicOverlay = findViewById(R.id.graphic);
@@ -132,7 +108,8 @@ public class Select extends AppCompatActivity {
                 Bitmap bitmap = cameraKitImage.getBitmap();
                 bitmap = Bitmap.createScaledBitmap(bitmap, cameraView.getWidth(), cameraView.getHeight(), false);
                 cameraView.stop();
-                onActivityResult(bitmap);
+
+                show(bitmap);
 
             }
 
@@ -143,8 +120,7 @@ public class Select extends AppCompatActivity {
         });
 
     }
-
-    protected void onActivityResult(Bitmap picture) {
+    protected void show(Bitmap picture) {
 
 
         if (flag == 1) {
@@ -177,5 +153,5 @@ public class Select extends AppCompatActivity {
 
         }
     }
-}
 
+}

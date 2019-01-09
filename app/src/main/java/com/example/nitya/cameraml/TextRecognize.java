@@ -1,11 +1,15 @@
 
 package com.example.nitya.cameraml;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.nitya.cameraml.Helper.GraphicOverlay;
@@ -20,14 +24,14 @@ import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 import com.google.firebase.ml.vision.text.RecognizedLanguage;
 
+import org.w3c.dom.Text;
+
 import java.util.Arrays;
 import java.util.List;
 
 public class TextRecognize {
 
-
-
-    public static void recognizeText(final GraphicOverlay graphicOverlay,Bitmap bitmap) {
+    public static void recognizeText(final GraphicOverlay graphicOverlay, Bitmap bitmap) {
 
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
 
@@ -55,37 +59,41 @@ public class TextRecognize {
                                         // ...
                                     }
                                 });
+
     }
 
     private static void drawTextResult(final GraphicOverlay graphicOverlay,FirebaseVisionText result) {
 
         Log.i("flaggggg", "yes here");
         String resultText = result.getText();
+
         for (FirebaseVisionText.TextBlock block : result.getTextBlocks()) {
             String blockText = block.getText();
             Log.i("helloworld", "kyabaat"+blockText);
-            List<FirebaseVisionText.TextBlock> blocks=result.getTextBlocks();
+            List<FirebaseVisionText.Line> lines=block.getLines();
 
-        if(blocks.size()==0){
+        if(result==null){
             //Toast.makeText(,"No TextFound!",Toast.LENGTH_SHORT).show();
             return;
         }
 
         graphicOverlay.clear();
 
-        for(int i=0;i<blocks.size();i++) {
+        for(FirebaseVisionText.Line line:lines ) {
 
-            List<FirebaseVisionText.Line> lines = blocks.get(i).getLines();
+                List<FirebaseVisionText.Element> elements = line.getElements();
 
-            for (int j = 0; j < lines.size(); j++) {
+                for (FirebaseVisionText.Element element:elements){
 
-                List<FirebaseVisionText.Element> elements = lines.get(j).getElements();
+                    Log.i("qwertyyyy",element.getText());
 
-                for (int k = 0; k < elements.size(); k++) {
-                    TextGraphic textGraphic = new TextGraphic(graphicOverlay, elements.get(j));
+                    TextGraphic textGraphic = new TextGraphic(graphicOverlay, element);
                     graphicOverlay.add(textGraphic);
+<<<<<<< HEAD
 
                     Log.i("flaggggyyyyy",lines.get(j).toString());
+=======
+>>>>>>> 70bd30f840a9325dd2988ab67954e66fb4a2c199
                 }
             }
         }
@@ -96,4 +104,4 @@ public class TextRecognize {
 
 
 
-}
+

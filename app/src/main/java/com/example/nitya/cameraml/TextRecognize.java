@@ -84,7 +84,8 @@ public class TextRecognize {
                 for (int k = 0; k < elements.size(); k++) {
                     TextGraphic textGraphic = new TextGraphic(graphicOverlay, elements.get(j));
                     graphicOverlay.add(textGraphic);
-                    Log.i("flaggggyyyyy",elements.get(k).toString());
+
+                    Log.i("flaggggyyyyy",lines.get(j).toString());
                 }
             }
         }

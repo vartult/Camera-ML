@@ -63,6 +63,7 @@ public class Select extends AppCompatActivity {
     GraphicOverlay graphicOverlay;
     //<<<<<<< HEAD
     Button viewall;
+    ArrayList<String> words;
 //=======
 
     @Override
@@ -71,10 +72,9 @@ public class Select extends AppCompatActivity {
         setContentView(R.layout.activity_select);
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
+        viewall=findViewById(R.id.viewall);
 
-
-
-
+        words=new ArrayList<>();
         if (allPermissionsGranted()) {
             Intent intent = getIntent();
             flag = intent.getIntExtra("flag", 0);
@@ -100,6 +100,19 @@ public class Select extends AppCompatActivity {
             getRuntimePermissions();
         }
 
+        viewall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.i("something",words.toString());
+
+                Intent intent=new Intent(Select.this,ViewIt.class);
+                intent.putStringArrayListExtra("words",words);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 
@@ -111,7 +124,7 @@ public class Select extends AppCompatActivity {
             //Bitmap picture = (Bitmap) data.getExtras().get("data");
            //picture.setPixel(5312,2988,1);
             //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
-            Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
+            final Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
 
 
             imageView.setImageURI(Uri.parse(imageFilePath));
@@ -120,7 +133,26 @@ public class Select extends AppCompatActivity {
 
             if (flag==1){
                 //text recognition
-                TextRecognize.recognizeText(graphicOverlay,picture);
+                final TextRecognize obj=new TextRecognize();
+                obj.recognizeText(graphicOverlay,picture);
+
+                Thread timer = new Thread(){
+                    public void run() {
+                        try {
+                            sleep(10000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }finally {
+                            words=obj.getList();
+                            //Log.i("wordss",words.toString());
+                        }
+                    }
+
+
+                };
+                timer.start();
+
+
             }
 
             if (flag==2){

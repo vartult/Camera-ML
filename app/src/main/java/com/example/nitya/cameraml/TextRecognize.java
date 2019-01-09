@@ -1,35 +1,26 @@
 
 package com.example.nitya.cameraml;
 
-import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Point;
-import android.graphics.Rect;
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.nitya.cameraml.Helper.GraphicOverlay;
 import com.example.nitya.cameraml.Helper.TextGraphic;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
+import com.google.android.gms.vision.L;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
-import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
-import com.google.firebase.ml.vision.text.RecognizedLanguage;
 
-import org.w3c.dom.Text;
-
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TextRecognize {
+    static ArrayList<String> qwer;
+
 
     public static void recognizeText(final GraphicOverlay graphicOverlay, Bitmap bitmap) {
 
@@ -40,13 +31,16 @@ public class TextRecognize {
         // [END get_detector_default]
 
         // [START run_detector]
+
+        final ArrayList<String>[] words=new ArrayList[1];
                 detector.processImage(image)
                         .addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
                             @Override
                             public void onSuccess(FirebaseVisionText firebaseVisionText) {
                                 Log.i("ho gya ye","qwertyuiop");
                                 if(firebaseVisionText!=null)
-                                drawTextResult(graphicOverlay,firebaseVisionText);
+                                words[0] =drawTextResult(graphicOverlay,firebaseVisionText);
+                                Log.i("some3",words[0].toString());
 
                             }
                         })
@@ -59,10 +53,12 @@ public class TextRecognize {
                                         // ...
                                     }
                                 });
-
+                qwer=words[0];
     }
 
-    private static void drawTextResult(final GraphicOverlay graphicOverlay,FirebaseVisionText result) {
+    private static ArrayList<String> drawTextResult(final GraphicOverlay graphicOverlay,FirebaseVisionText result) {
+
+        ArrayList<String> words=new ArrayList<>();
 
         Log.i("flaggggg", "yes here");
         String resultText = result.getText();
@@ -71,11 +67,6 @@ public class TextRecognize {
             String blockText = block.getText();
             Log.i("helloworld", "kyabaat"+blockText);
             List<FirebaseVisionText.Line> lines=block.getLines();
-
-        if(result==null){
-            //Toast.makeText(,"No TextFound!",Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         graphicOverlay.clear();
 
@@ -86,6 +77,7 @@ public class TextRecognize {
                 for (FirebaseVisionText.Element element:elements){
 
                     Log.i("qwertyyyy",element.getText());
+                    words.add(element.getText());
 
                     TextGraphic textGraphic = new TextGraphic(graphicOverlay, element);
                     graphicOverlay.add(textGraphic);
@@ -93,8 +85,14 @@ public class TextRecognize {
             }
         }
 
+        return words;
+
 
         }
+    public static ArrayList<String> getList(){
+        return qwer;
+    }
+
     }
 
 

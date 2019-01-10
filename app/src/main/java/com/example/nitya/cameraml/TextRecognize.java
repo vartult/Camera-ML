@@ -65,7 +65,6 @@ public class TextRecognize {
     private static void drawTextResult(final GraphicOverlay graphicOverlay,FirebaseVisionText result) {
 
         Log.i("flaggggg", "yes here");
-        String resultText = result.getText();
 
         for (FirebaseVisionText.TextBlock block : result.getTextBlocks()) {
             String blockText = block.getText();
@@ -89,11 +88,8 @@ public class TextRecognize {
 
                     TextGraphic textGraphic = new TextGraphic(graphicOverlay, element);
                     graphicOverlay.add(textGraphic);
-<<<<<<< HEAD
 
-                    Log.i("flaggggyyyyy",lines.get(j).toString());
-=======
->>>>>>> 70bd30f840a9325dd2988ab67954e66fb4a2c199
+
                 }
             }
         }

@@ -37,11 +37,8 @@ public class TextRecognize {
                         .addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
                             @Override
                             public void onSuccess(FirebaseVisionText firebaseVisionText) {
-                                Log.i("ho gya ye","qwertyuiop");
                                 if(firebaseVisionText!=null)
                                 words[0] =drawTextResult(graphicOverlay,firebaseVisionText);
-                                Log.i("some3",words[0].toString());
-
                             }
                         })
                         .addOnFailureListener(
@@ -60,13 +57,13 @@ public class TextRecognize {
 
         ArrayList<String> words=new ArrayList<>();
 
-        Log.i("flaggggg", "yes here");
-        String resultText = result.getText();
 
         for (FirebaseVisionText.TextBlock block : result.getTextBlocks()) {
+
             String blockText = block.getText();
-            Log.i("helloworld", "kyabaat"+blockText);
+            Log.i("Block Text", blockText);
             List<FirebaseVisionText.Line> lines=block.getLines();
+
 
         graphicOverlay.clear();
 
@@ -76,11 +73,15 @@ public class TextRecognize {
 
                 for (FirebaseVisionText.Element element:elements){
 
-                    Log.i("qwertyyyy",element.getText());
+                    Log.i("element Text",element.getText());
                     words.add(element.getText());
 
-                    TextGraphic textGraphic = new TextGraphic(graphicOverlay, element);
+                    GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, element);
                     graphicOverlay.add(textGraphic);
+
+                    //view.showHandle(element.getText(), element.boundingBox)
+
+
                 }
             }
         }

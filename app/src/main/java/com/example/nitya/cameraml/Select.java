@@ -124,10 +124,26 @@ public class Select extends AppCompatActivity {
             //Bitmap picture = (Bitmap) data.getExtras().get("data");
            //picture.setPixel(5312,2988,1);
             //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
-            final Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
+            Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
+
+            int targetWidth = imageView.getWidth();
+            int maxHeight = imageView.getHeight();
+
+            // Determine how much to scale down the image
+            float scaleFactor =
+                    Math.max(
+                            (float) picture.getWidth() / (float) targetWidth,
+                            (float) picture.getHeight() / (float) maxHeight);
+
+            picture =
+                    Bitmap.createScaledBitmap(
+                            picture,
+                            (int) (picture.getWidth() / scaleFactor),
+                            (int) (picture.getHeight() / scaleFactor),
+                            false);
 
 
-            imageView.setImageURI(Uri.parse(imageFilePath));
+            imageView.setImageBitmap(picture);
 
 
 

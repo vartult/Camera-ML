@@ -80,10 +80,6 @@ public class TextRecognize {
 
                     GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, element);
                     graphicOverlay.add(textGraphic);
-
-                    //view.showHandle(element.getText(), element.boundingBox)
-
-
                 }
             }
         }

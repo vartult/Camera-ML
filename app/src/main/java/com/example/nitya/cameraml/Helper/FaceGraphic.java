@@ -1,4 +1,4 @@
-package com.example.nitya.cameraml;
+package com.example.nitya.cameraml.Helper;
 
 import android.graphics.Canvas;
 import android.graphics.Color;

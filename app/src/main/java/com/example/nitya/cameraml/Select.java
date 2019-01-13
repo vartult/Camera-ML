@@ -20,6 +20,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -58,12 +59,14 @@ import java.util.Locale;
 public class Select extends AppCompatActivity {
     private static final int PERMISSION_REQUESTS = 1;
     int flag;
-    ImageView imageView;
+    private ImageView imageView;
+    private Integer mImageMaxWidth;
+    // Max height (portrait mode)
+    private Integer mImageMaxHeight;
     private String imageFilePath = "";
     GraphicOverlay graphicOverlay;
-    //<<<<<<< HEAD
-    Button viewall;
-//=======
+    Button viewall,click;
+    ArrayList<String> words;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,32 +75,51 @@ public class Select extends AppCompatActivity {
 
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
-        viewall=findViewById(R.id.viewall);
+        viewall = findViewById(R.id.viewall);
+        click = findViewById(R.id.click);
 
-        if (allPermissionsGranted()) {
-            Intent intent = getIntent();
-            flag = intent.getIntExtra("flag", 0);
-            Log.i("flagggggg111111111", String.valueOf(flag));
+        click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                words = new ArrayList<>();
 
-            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                Log.i("flagggggg", String.valueOf(flag));
-                File photoFile = null;
-                try {
-                    photoFile = createImageFile();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    return;
+                if (allPermissionsGranted()) {
+                    Intent intent = getIntent();
+                    flag = intent.getIntExtra("flag", 0);
+
+                    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                        Log.i("flagggggg", String.valueOf(flag));
+                        File photoFile = null;
+                        try {
+                            photoFile = createImageFile();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            return;
+                        }
+                        Uri photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", photoFile);
+                        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                        startActivityForResult(takePictureIntent, 100);
+                    }
+                } else {
+                    getRuntimePermissions();
                 }
-                Uri photoUri = FileProvider.getUriForFile(this, getPackageName() + ".provider", photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-                startActivityForResult(takePictureIntent, 100);
-            }
-        }
 
-        else {
-            getRuntimePermissions();
-        }
+            }
+});
+        viewall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.i("something",words.toString());
+
+                Intent intent=new Intent(Select.this,ViewIt.class);
+                intent.putStringArrayListExtra("words",words);
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 
@@ -110,29 +132,28 @@ public class Select extends AppCompatActivity {
             //Bitmap picture = (Bitmap) data.getExtras().get("data");
            //picture.setPixel(5312,2988,1);
             //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
-            Bitmap picture = null;
-            try {
-                picture = BitmapFactory.decodeFile(imageFilePath);
-            }catch (Exception e){
-                Log.i("Exception999999","caught");
+            //picture=decodeFile(imageFilePath);
 
-            }
+            Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
 
-            int targetWidth = imageView.getWidth();
-            int maxHeight = imageView.getHeight();
+            Pair<Integer, Integer> targetedSize = getTargetedWidthHeight();
+
+            int targetWidth = targetedSize.first;
+            int maxHeight = targetedSize.second;
+
 
             // Determine how much to scale down the image
-            /*float scaleFactor =
+            float scaleFactor =
                     Math.max(
                             (float) picture.getWidth() / (float) targetWidth,
                             (float) picture.getHeight() / (float) maxHeight);
-
-            picture =
+            picture=
                     Bitmap.createScaledBitmap(
                             picture,
                             (int) (picture.getWidth() / scaleFactor),
                             (int) (picture.getHeight() / scaleFactor),
-                            false);*/
+
+                            false);
 
 
             imageView.setImageBitmap(picture);
@@ -236,6 +257,44 @@ public class Select extends AppCompatActivity {
         imageFilePath = image.getAbsolutePath();
 
         return image;
+    }
+
+    private Integer getImageMaxWidth() {
+        if (mImageMaxWidth == null) {
+            // Calculate the max width in portrait mode. This is done lazily since we need to
+            // wait for
+            // a UI layout pass to get the right values. So delay it to first time image
+            // rendering time.
+            mImageMaxWidth = imageView.getWidth();
+        }
+
+        return mImageMaxWidth;
+    }
+
+    // Returns max image height, always for portrait mode. Caller needs to swap width / height for
+    // landscape mode.
+    private Integer getImageMaxHeight() {
+        if (mImageMaxHeight == null) {
+            // Calculate the max width in portrait mode. This is done lazily since we need to
+            // wait for
+            // a UI layout pass to get the right values. So delay it to first time image
+            // rendering time.
+            mImageMaxHeight =
+                    imageView.getHeight();
+        }
+
+        return mImageMaxHeight;
+    }
+
+    // Gets the targeted width / height.
+    private Pair<Integer, Integer> getTargetedWidthHeight() {
+        int targetWidth;
+        int targetHeight;
+        int maxWidthForPortraitMode = getImageMaxWidth();
+        int maxHeightForPortraitMode = getImageMaxHeight();
+        targetWidth = maxWidthForPortraitMode;
+        targetHeight = maxHeightForPortraitMode;
+        return new Pair<>(targetWidth, targetHeight);
     }
 
 }

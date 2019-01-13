@@ -1,9 +1,14 @@
 
 package com.example.nitya.cameraml;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.nitya.cameraml.Helper.GraphicOverlay;
 import com.example.nitya.cameraml.Helper.TextGraphic;
@@ -19,10 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TextRecognize {
-    static ArrayList<String> qwer;
 
 
-    public static void recognizeText(final GraphicOverlay graphicOverlay, Bitmap bitmap) {
+    public static void recognizeText(final GraphicOverlay graphicOverlay, Bitmap bitmap, final Context context, final Button viewall) {
 
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
 
@@ -32,13 +36,12 @@ public class TextRecognize {
 
         // [START run_detector]
 
-        final ArrayList<String>[] words=new ArrayList[1];
                 detector.processImage(image)
                         .addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
                             @Override
                             public void onSuccess(FirebaseVisionText firebaseVisionText) {
                                 if(firebaseVisionText!=null)
-                                words[0] =drawTextResult(graphicOverlay,firebaseVisionText);
+                                drawTextResult(graphicOverlay,firebaseVisionText,context,viewall);
                             }
                         })
                         .addOnFailureListener(
@@ -50,12 +53,11 @@ public class TextRecognize {
                                         // ...
                                     }
                                 });
-                qwer=words[0];
     }
 
-    private static ArrayList<String> drawTextResult(final GraphicOverlay graphicOverlay,FirebaseVisionText result) {
+    private static void drawTextResult(final GraphicOverlay graphicOverlay, FirebaseVisionText result, final Context context, Button viewall) {
 
-        ArrayList<String> words=new ArrayList<>();
+        final ArrayList<String> words=new ArrayList<>();
 
 
         for (FirebaseVisionText.TextBlock block : result.getTextBlocks()) {
@@ -81,14 +83,20 @@ public class TextRecognize {
                 }
             }
         }
+        viewall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        return words;
+                Intent intent=new Intent(context,ViewIt.class);
+                intent.putStringArrayListExtra("words",words);
+                context.startActivity(intent);
+
+            }
+        });
 
 
         }
-    public static ArrayList<String> getList(){
-        return qwer;
-    }
+
 
     }
 

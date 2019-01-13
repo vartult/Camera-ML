@@ -72,6 +72,7 @@ public class Select extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
+
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
         viewall = findViewById(R.id.viewall);
@@ -80,29 +81,31 @@ public class Select extends AppCompatActivity {
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-        words = new ArrayList<>();
-        if (allPermissionsGranted()) {
-            Intent intent = getIntent();
-            flag = intent.getIntExtra("flag", 0);
+                words = new ArrayList<>();
 
-            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                Log.i("flagggggg", String.valueOf(flag));
-                File photoFile = null;
-                try {
-                    photoFile = createImageFile();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    return;
+                if (allPermissionsGranted()) {
+                    Intent intent = getIntent();
+                    flag = intent.getIntExtra("flag", 0);
+
+                    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                        Log.i("flagggggg", String.valueOf(flag));
+                        File photoFile = null;
+                        try {
+                            photoFile = createImageFile();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            return;
+                        }
+                        Uri photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", photoFile);
+                        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                        startActivityForResult(takePictureIntent, 100);
+                    }
+                } else {
+                    getRuntimePermissions();
                 }
-                Uri photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-                startActivityForResult(takePictureIntent, 100);
+
             }
-        } else {
-            getRuntimePermissions();
-        }
-    }
 });
         viewall.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +119,7 @@ public class Select extends AppCompatActivity {
 
             }
         });
+
 
     }
 
@@ -148,35 +152,16 @@ public class Select extends AppCompatActivity {
                             picture,
                             (int) (picture.getWidth() / scaleFactor),
                             (int) (picture.getHeight() / scaleFactor),
-                            true);
-            Log.i("scale Factor","new value= "+picture.getWidth());
+
+                            false);
+
 
             imageView.setImageBitmap(picture);
 
-
-
             if (flag==1){
                 //text recognition
-                final TextRecognize obj=new TextRecognize();
-                obj.recognizeText(graphicOverlay,picture);
-
-                Thread timer = new Thread(){
-                    public void run() {
-                        try {
-                            sleep(10000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }finally {
-                            words=obj.getList();
-                            //Log.i("wordss",words.toString());
-                        }
-                    }
-
-
-                };
-                timer.start();
-
-
+                 TextRecognize obj=new TextRecognize();
+                obj.recognizeText(graphicOverlay,picture,getApplicationContext(),viewall);
             }
 
             if (flag==2){
@@ -190,7 +175,7 @@ public class Select extends AppCompatActivity {
                 //recognize face
 
                 FaceDetector obj=new FaceDetector();
-                obj.detect(graphicOverlay,picture,viewall);
+                obj.detect(graphicOverlay,picture,getApplicationContext(),viewall);
             }
 
             if(flag==4){

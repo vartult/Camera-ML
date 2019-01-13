@@ -23,9 +23,6 @@ import java.util.List;
 
 public class Barcode {
 
-
-
-
     public static void scanBarcodes(Bitmap bitmap,final GraphicOverlay graphicOverlay) {
         // [START set_detector_options]
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);

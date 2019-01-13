@@ -63,18 +63,17 @@ public class Select extends AppCompatActivity {
     GraphicOverlay graphicOverlay;
     //<<<<<<< HEAD
     Button viewall;
-    ArrayList<String> words;
 //=======
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
+
         imageView = findViewById(R.id.image);
         graphicOverlay = findViewById(R.id.graphic);
         viewall=findViewById(R.id.viewall);
 
-        words=new ArrayList<>();
         if (allPermissionsGranted()) {
             Intent intent = getIntent();
             flag = intent.getIntExtra("flag", 0);
@@ -100,19 +99,6 @@ public class Select extends AppCompatActivity {
             getRuntimePermissions();
         }
 
-        viewall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Log.i("something",words.toString());
-
-                Intent intent=new Intent(Select.this,ViewIt.class);
-                intent.putStringArrayListExtra("words",words);
-                startActivity(intent);
-
-            }
-        });
-
     }
 
 
@@ -124,13 +110,19 @@ public class Select extends AppCompatActivity {
             //Bitmap picture = (Bitmap) data.getExtras().get("data");
            //picture.setPixel(5312,2988,1);
             //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
-            Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
+            Bitmap picture = null;
+            try {
+                picture = BitmapFactory.decodeFile(imageFilePath);
+            }catch (Exception e){
+                Log.i("Exception999999","caught");
+
+            }
 
             int targetWidth = imageView.getWidth();
             int maxHeight = imageView.getHeight();
 
             // Determine how much to scale down the image
-            float scaleFactor =
+            /*float scaleFactor =
                     Math.max(
                             (float) picture.getWidth() / (float) targetWidth,
                             (float) picture.getHeight() / (float) maxHeight);
@@ -140,35 +132,15 @@ public class Select extends AppCompatActivity {
                             picture,
                             (int) (picture.getWidth() / scaleFactor),
                             (int) (picture.getHeight() / scaleFactor),
-                            false);
+                            false);*/
 
 
             imageView.setImageBitmap(picture);
 
-
-
             if (flag==1){
                 //text recognition
-                final TextRecognize obj=new TextRecognize();
-                obj.recognizeText(graphicOverlay,picture);
-
-                Thread timer = new Thread(){
-                    public void run() {
-                        try {
-                            sleep(10000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }finally {
-                            words=obj.getList();
-                            //Log.i("wordss",words.toString());
-                        }
-                    }
-
-
-                };
-                timer.start();
-
-
+                 TextRecognize obj=new TextRecognize();
+                obj.recognizeText(graphicOverlay,picture,getApplicationContext(),viewall);
             }
 
             if (flag==2){
@@ -182,7 +154,7 @@ public class Select extends AppCompatActivity {
                 //recognize face
 
                 FaceDetector obj=new FaceDetector();
-                obj.detect(graphicOverlay,picture,viewall);
+                obj.detect(graphicOverlay,picture,getApplicationContext(),viewall);
             }
 
             if(flag==4){

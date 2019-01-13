@@ -1,5 +1,6 @@
 package com.example.nitya.cameraml;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
@@ -27,9 +28,9 @@ import java.util.List;
 
 public class FaceDetector {
 
-    ArrayList<FirebaseVisionFace> arrayList=new ArrayList<>();
+    ArrayList<Face> arrayList=new ArrayList<>();
 
-    public void detect(final GraphicOverlay graphicOverlay, Bitmap bitmap, final Button button) {
+    public void detect(final GraphicOverlay graphicOverlay, Bitmap bitmap, final Context context, final Button button) {
 
 
         FirebaseVisionFaceDetectorOptions highAccuracy =
@@ -51,7 +52,7 @@ public class FaceDetector {
                             public void onSuccess(List<FirebaseVisionFace> firebaseVisionFaces) {
                                 Log.i("Wohhoo","success");
 
-                                processFaceList(graphicOverlay,firebaseVisionFaces,button);
+                                processFaceList(graphicOverlay,firebaseVisionFaces,context,button);
 
                             }
                         })
@@ -65,65 +66,45 @@ public class FaceDetector {
 
     }
 
-    private void processFaceList(GraphicOverlay graphicOverlay,List<FirebaseVisionFace> faces,Button button) {
+    private void processFaceList(GraphicOverlay graphicOverlay, List<FirebaseVisionFace> faces, final Context context, Button button) {
 
         for (FirebaseVisionFace face : faces) {
-            arrayList.add(face);
+
             Log.i("wohhhooo2","enterd");
-            Rect bounds = face.getBoundingBox();
 
             FaceGraphic faceGraphic = new FaceGraphic(graphicOverlay, face);
             graphicOverlay.add(faceGraphic);
-            float rotY = face.getHeadEulerAngleY();  // Head is rotated to the right rotY degrees
-            float rotZ = face.getHeadEulerAngleZ();  // Head is tilted sideways rotZ degrees
 
-            // If landmark detection was enabled (mouth, ears, eyes, cheeks, and
-            // nose available):
-            FirebaseVisionFaceLandmark leftEar = face.getLandmark(FirebaseVisionFaceLandmark.LEFT_EAR);
-            if (leftEar != null) {
-                FirebaseVisionPoint leftEarPos = leftEar.getPosition();
-            }
-
-            FirebaseVisionFaceLandmark rightEar = face.getLandmark(FirebaseVisionFaceLandmark.RIGHT_EAR);
-            if (rightEar != null) {
-                FirebaseVisionPoint rightEarPos = leftEar.getPosition();
-            }
-
-            FirebaseVisionFaceLandmark leftCheek = face.getLandmark(FirebaseVisionFaceLandmark.LEFT_CHEEK);
-            if (leftCheek != null) {
-                FirebaseVisionPoint leftCheekPos = leftEar.getPosition();
-            }
-
-            FirebaseVisionFaceLandmark rightCheek = face.getLandmark(FirebaseVisionFaceLandmark.RIGHT_CHEEK);
-            if (rightCheek != null) {
-                FirebaseVisionPoint rightCheekPos = leftEar.getPosition();
-            }
-
+            float smileProb=0.0f;
 
             // If classification was enabled:
             if (face.getSmilingProbability() != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {
-                float smileProb = face.getSmilingProbability();
+                 smileProb= face.getSmilingProbability()*100;
             }
-            if (face.getRightEyeOpenProbability() != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {
-                float rightEyeOpenProb = face.getRightEyeOpenProbability();
+            String smile,precision;
+            if (smileProb>50.0){
+                smile="Smiling";
+                precision="With precision of "+smileProb+" %";
+            }
+            else{
+                smile="Not Smiling";
+                precision="With precision of "+(100-smileProb)+" %";
             }
 
-            // If face tracking was enabled:
-            if (face.getTrackingId() != FirebaseVisionFace.INVALID_ID) {
-                int id = face.getTrackingId();
-            }
+            arrayList.add(new Face(face,smile,precision));
 
         }
 
-        /*button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //Intent view = new Intent(FaceDetector.this,ViewIt.class);
-                //view.putExtra("list",arrayList);
+                Intent view = new Intent(context,ViewIt.class);
+                view.putExtra("list",arrayList);
+                context.startActivity(view);
 
             }
-        });*/
+        });
 
 
     }

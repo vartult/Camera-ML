@@ -1,5 +1,7 @@
 package com.example.nitya.cameraml;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,8 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -54,8 +59,20 @@ public class ViewIt extends AppCompatActivity {
             View itemview=getLayoutInflater().inflate(R.layout.activity_content_view,
                     parent,
                     false);
-            TextView contentview=itemview.findViewById(R.id.content);
+            final TextView contentview=itemview.findViewById(R.id.content);
             contentview.setText(getItem(position));
+
+            ImageView copy=itemview.findViewById(R.id.copy);
+            copy.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                    ClipData clip = ClipData.newPlainText("simple text",contentview.getText());
+                    clipboard.setPrimaryClip(clip);
+                    Toast.makeText(getApplicationContext(), "String copied to Clipboard",
+                            Toast.LENGTH_SHORT).show();
+                }
+            });
             return  itemview;
         }
     }

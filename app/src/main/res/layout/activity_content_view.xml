@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:textSize="40px"
+        android:textSize="50px"
         android:id="@+id/content"
         android:layout_width="317dp"
         android:layout_height="64dp"

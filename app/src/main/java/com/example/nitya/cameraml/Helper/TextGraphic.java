@@ -19,9 +19,9 @@ public class TextGraphic extends GraphicOverlay.Graphic {
     public static final float STROKE_WIDTH=5.0f;
 
     private final Paint rectPaint,textPaint;
-    private final FirebaseVisionText.Element text;
+    private final FirebaseVisionText.Line text;
 
-    public TextGraphic(GraphicOverlay overlay,FirebaseVisionText.Element text) {
+    public TextGraphic(GraphicOverlay overlay,FirebaseVisionText.Line text) {
         super(overlay);
         Log.i("kaaaaaaaaaaaaaaaaam","anotherrrrrrrrrrrrrr kaaaaaaaaaaaaammmmm");
         this.text=text;

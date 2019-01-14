@@ -73,6 +73,9 @@ public class TextRecognize {
         for(FirebaseVisionText.Line line:lines ) {
                 String linetext=line.getText();
                 words.add(linetext);
+
+                GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, line);
+                graphicOverlay.add(textGraphic);
                 List<FirebaseVisionText.Element> elements = line.getElements();
 
                 for (FirebaseVisionText.Element element:elements){
@@ -80,8 +83,8 @@ public class TextRecognize {
                     Log.i("element Text",element.getText());
                     //words.add(element.getText());
 
-                    GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, element);
-                    graphicOverlay.add(textGraphic);
+                    //GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, element);
+                    //graphicOverlay.add(textGraphic);
                 }
             }
         }

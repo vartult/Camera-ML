@@ -168,7 +168,7 @@ public class Select extends AppCompatActivity {
                 //label images
 
                 LabelingImages obj=new LabelingImages();
-                obj.label(picture);
+                obj.label(picture,getApplicationContext(),viewall);
             }
 
             if (flag==3){

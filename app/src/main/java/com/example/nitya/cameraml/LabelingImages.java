@@ -1,8 +1,12 @@
 package com.example.nitya.cameraml;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -13,11 +17,12 @@ import com.google.firebase.ml.vision.label.FirebaseVisionLabel;
 import com.google.firebase.ml.vision.label.FirebaseVisionLabelDetector;
 import com.google.firebase.ml.vision.label.FirebaseVisionLabelDetectorOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LabelingImages {
 
-    public void label(Bitmap bitmap){
+    public void label(Bitmap bitmap, final Context context, Button viewall){
 
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
 
@@ -29,6 +34,8 @@ public class LabelingImages {
         FirebaseVisionLabelDetector detector=FirebaseVision.getInstance()
                 .getVisionLabelDetector(options);
 
+        final ArrayList<String> arrLabel=new ArrayList<>();
+
         Task<List<FirebaseVisionLabel>> result=
                 detector.detectInImage(image)
                 .addOnSuccessListener(
@@ -39,10 +46,10 @@ public class LabelingImages {
                                 for (FirebaseVisionLabel label:firebaseVisionLabels){
 
                                     String text=label.getLabel();
-                                    String entityId=label.getEntityId();
-                                    float confidence=label.getConfidence();
+                                    arrLabel.add(text);
+                                    Log.i("qwert","yes");
 
-                                    Log.i("Qwertyyyyy",text+"  "+entityId+"  "+confidence);
+                                    Log.i("Qwertyyyyy",text);
                                 }
 
                             }
@@ -54,6 +61,17 @@ public class LabelingImages {
 
                     }
                 });
+
+        viewall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(context,ViewIt.class);
+                intent.putStringArrayListExtra("words",arrLabel);
+                context.startActivity(intent);
+
+            }
+        });
 
 
     }

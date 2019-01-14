@@ -11,12 +11,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ViewFaces extends AppCompatActivity {
 
     ListView listView;
-    ArrayList<Face> arr;
+    ArrayList<? extends Face> arr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,13 @@ public class ViewFaces extends AppCompatActivity {
 
         listView=findViewById(R.id.faceList);
 
-        Intent intent=getIntent();
-        arr= (ArrayList<Face>) intent.getSerializableExtra("list");
+        //Intent intent=getIntent();
+        //arr= (ArrayList<Face>) intent.getParcelableExtra("list");
+
+        Bundle bundle=this.getIntent().getExtras();
+        arr=savedInstanceState.getParcelableArrayList("list");
+        CustomAdapter customAdapter=new CustomAdapter();
+        listView.setAdapter(customAdapter);
     }
 
     class CustomAdapter extends BaseAdapter{

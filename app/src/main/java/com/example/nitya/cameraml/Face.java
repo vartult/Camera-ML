@@ -1,16 +1,15 @@
 package com.example.nitya.cameraml;
 
 import android.graphics.Bitmap;
-
-import com.google.firebase.ml.vision.face.FirebaseVisionFace;
+import android.os.Parcelable;
 
 public class Face {
 
-    FirebaseVisionFace face;
+    Bitmap face;
     String smile;
     String accuracy;
 
-    public Face(FirebaseVisionFace face, String smile, String precision) {
+    public Face(Bitmap face, String smile, String precision) {
         this.face=face;
         this.smile=smile;
         this.accuracy=precision;
@@ -20,7 +19,7 @@ public class Face {
         return smile;
     }
 
-    public FirebaseVisionFace getFace() {
+    public Bitmap getFace() {
         return face;
     }
 

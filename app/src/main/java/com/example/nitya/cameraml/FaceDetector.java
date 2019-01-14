@@ -5,6 +5,10 @@ import android.content.Intent;
 
 import android.graphics.Bitmap;
 import android.graphics.Rect;
+import android.graphics.RectF;
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +27,7 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceLandmark;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,8 +35,7 @@ public class FaceDetector {
 
     ArrayList<Face> arrayList=new ArrayList<>();
 
-    public void detect(final GraphicOverlay graphicOverlay, Bitmap bitmap, final Context context, final Button button) {
-
+    public void detect(final GraphicOverlay graphicOverlay, final Bitmap bitmap, final Context context, final Button button) {
 
         FirebaseVisionFaceDetectorOptions highAccuracy =
                 new FirebaseVisionFaceDetectorOptions.Builder()
@@ -52,7 +56,7 @@ public class FaceDetector {
                             public void onSuccess(List<FirebaseVisionFace> firebaseVisionFaces) {
                                 Log.i("Wohhoo","success");
 
-                                processFaceList(graphicOverlay,firebaseVisionFaces,context,button);
+                                processFaceList(graphicOverlay,firebaseVisionFaces,context,button,bitmap);
 
                             }
                         })
@@ -66,32 +70,37 @@ public class FaceDetector {
 
     }
 
-    private void processFaceList(GraphicOverlay graphicOverlay, List<FirebaseVisionFace> faces, final Context context, Button button) {
+    private void processFaceList(GraphicOverlay graphicOverlay, List<FirebaseVisionFace> faces, final Context context, Button button,Bitmap bitmap) {
 
         for (FirebaseVisionFace face : faces) {
 
-            Log.i("wohhhooo2","enterd");
+            Log.i("wohhhooo2", "enterd");
 
             FaceGraphic faceGraphic = new FaceGraphic(graphicOverlay, face);
             graphicOverlay.add(faceGraphic);
 
-            float smileProb=0.0f;
+            float smileProb = 0.0f;
 
             // If classification was enabled:
             if (face.getSmilingProbability() != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {
-                 smileProb= face.getSmilingProbability()*100;
+                smileProb = face.getSmilingProbability() * 100;
             }
-            String smile,precision;
-            if (smileProb>50.0){
-                smile="Smiling";
-                precision="With precision of "+smileProb+" %";
-            }
-            else{
-                smile="Not Smiling";
-                precision="With precision of "+(100-smileProb)+" %";
+            String smile, precision;
+            if (smileProb > 50.0) {
+                smile = "Smiling";
+                precision = "With precision of " + smileProb + " %";
+            } else {
+                smile = "Not Smiling";
+                precision = "With precision of " + (100 - smileProb) + " %";
             }
 
-            arrayList.add(new Face(face,smile,precision));
+            Rect rect = new Rect(face.getBoundingBox());
+            Bitmap qwer = Bitmap.createBitmap(bitmap, rect.centerX(), rect.centerY(), 60, 60);
+
+            /*ByteArrayOutputStream bStream=new ByteArrayOutputStream();
+            qwer.compress(Bitmap.CompressFormat.PNG,100,bStream);
+            byte[] bytes=bStream.toByteArray();*/
+            arrayList.add(new Face(qwer, smile, precision));
 
         }
 
@@ -99,13 +108,14 @@ public class FaceDetector {
             @Override
             public void onClick(View v) {
 
-                Intent view = new Intent(context,ViewIt.class);
-                view.putExtra("list",arrayList);
+                Bundle bundle=new Bundle();
+                //bundle.putParcelableArrayList("list", (ArrayList<? extends Parcelable>) arrayList);
+
+                Intent view = new Intent(context,ViewFaces.class);
+                view.putExtras(bundle);
                 context.startActivity(view);
 
             }
         });
-
-
     }
 }

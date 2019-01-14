@@ -81,8 +81,4 @@ public class Barcode {
                 });
         // [END run_detector]
     }
-
-
-
-
 }

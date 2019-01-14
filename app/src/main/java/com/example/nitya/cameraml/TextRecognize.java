@@ -64,19 +64,21 @@ public class TextRecognize {
 
             String blockText = block.getText();
             Log.i("Block Text", blockText);
+            //words.add(blockText);
             List<FirebaseVisionText.Line> lines=block.getLines();
 
 
         graphicOverlay.clear();
 
         for(FirebaseVisionText.Line line:lines ) {
-
+                String linetext=line.getText();
+                words.add(linetext);
                 List<FirebaseVisionText.Element> elements = line.getElements();
 
                 for (FirebaseVisionText.Element element:elements){
 
                     Log.i("element Text",element.getText());
-                    words.add(element.getText());
+                    //words.add(element.getText());
 
                     GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, element);
                     graphicOverlay.add(textGraphic);

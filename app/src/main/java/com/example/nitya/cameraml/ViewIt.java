@@ -41,7 +41,7 @@ public class ViewIt extends AppCompatActivity {
 
         @Override
         public String getItem(int position) {
-            return null;
+            return finalWord.get(position);
         }
 
         @Override
@@ -51,7 +51,7 @@ public class ViewIt extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View itemview=getLayoutInflater().inflate(R.layout.contentview,
+            View itemview=getLayoutInflater().inflate(R.layout.activity_content_view,
                     parent,
                     false);
             TextView contentview=itemview.findViewById(R.id.content);

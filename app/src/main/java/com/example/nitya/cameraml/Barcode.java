@@ -1,11 +1,15 @@
 package com.example.nitya.cameraml;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.icu.util.ValueIterator;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.nitya.cameraml.Helper.GraphicOverlay;
 import com.example.nitya.cameraml.Helper.TextGraphic;
@@ -19,11 +23,12 @@ import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetectorOption
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Barcode {
 
-    public static void scanBarcodes(Bitmap bitmap,final GraphicOverlay graphicOverlay) {
+    public static void scanBarcodes(Bitmap bitmap, final GraphicOverlay graphicOverlay, final Context context, Button viewall) {
         // [START set_detector_options]
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
         FirebaseVisionBarcodeDetectorOptions options =
@@ -34,6 +39,8 @@ public class Barcode {
                         .build();
         FirebaseVisionBarcodeDetector detector = FirebaseVision.getInstance()
                 .getVisionBarcodeDetector();
+
+        final ArrayList<String> arrBarcode=new ArrayList<>();
 
         Task<List<FirebaseVisionBarcode>> result = detector.detectInImage(image)
                 .addOnSuccessListener(new OnSuccessListener<List<FirebaseVisionBarcode>>() {
@@ -61,6 +68,7 @@ public class Barcode {
                                     String password = barcode.getWifi().getPassword();
                                     int type = barcode.getWifi().getEncryptionType();
                                     Log.i("URL"," is: ssid"+ssid+" pass"+password);
+                                    arrBarcode.add("Ssid: "+ssid+" ,Password: "+password);
                                     break;
                                 case FirebaseVisionBarcode.TYPE_URL:
                                     String title = barcode.getUrl().getTitle();
@@ -68,6 +76,7 @@ public class Barcode {
                                     //TextGraphic textGraphic = new TextGraphic();
                                     //graphicOverlay.add(textGraphic);
                                     Log.i("URL"," is: title:"+title+" url:"+url);
+                                    arrBarcode.add(url);
                                     break;
                             }
                         }
@@ -80,5 +89,16 @@ public class Barcode {
                     }
                 });
         // [END run_detector]
+
+        viewall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(context,ViewIt.class);
+                intent.putStringArrayListExtra("words",arrBarcode);
+                context.startActivity(intent);
+
+            }
+        });
     }
 }

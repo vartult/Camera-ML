@@ -107,18 +107,6 @@ public class Select extends AppCompatActivity {
 
             }
 });
-        viewall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Log.i("something",words.toString());
-
-                Intent intent=new Intent(Select.this,ViewIt.class);
-                intent.putStringArrayListExtra("words",words);
-                startActivity(intent);
-
-            }
-        });
 
 
     }
@@ -180,7 +168,7 @@ public class Select extends AppCompatActivity {
 
             if(flag==4){
                 //scan barcode
-                Barcode.scanBarcodes(picture,graphicOverlay);
+                Barcode.scanBarcodes(picture,graphicOverlay,getApplicationContext(),viewall);
             }
         }
         else{

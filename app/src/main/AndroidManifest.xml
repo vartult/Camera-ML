@@ -52,7 +52,10 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".ViewFaces"></activity>
+        <activity android:name=".ViewFaces" />
+        <activity android:name=".contentView">
+
+        </activity>
     </application>
 
 </manifest>

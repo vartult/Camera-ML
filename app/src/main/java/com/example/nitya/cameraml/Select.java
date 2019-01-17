@@ -1,6 +1,7 @@
 package com.example.nitya.cameraml;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -8,12 +9,19 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraCharacteristics;
+import android.hardware.camera2.CameraManager;
+import android.media.ExifInterface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
@@ -33,6 +41,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.vision.L;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
+import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata;
 import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
@@ -135,14 +144,25 @@ public class Select extends AppCompatActivity {
                     Math.max(
                             (float) picture.getWidth() / (float) targetWidth,
                             (float) picture.getHeight() / (float) maxHeight);
+
+
             picture=
                     Bitmap.createScaledBitmap(
                             picture,
                             (int) (picture.getWidth() / scaleFactor),
                             (int) (picture.getHeight() / scaleFactor),
-
                             false);
+            Integer result=0;
+            try {
+                result=getRotationCompensation("my_camera_id",getParent(), getApplicationContext());
+            } catch (CameraAccessException e) {
+                e.printStackTrace();
+            }
+            Matrix matrix = new Matrix();
 
+            matrix.postRotate(result);
+
+            picture = Bitmap.createBitmap(picture, 0, 0, picture.getWidth(), picture.getHeight(), matrix, true);
 
             imageView.setImageBitmap(picture);
 
@@ -283,6 +303,51 @@ public class Select extends AppCompatActivity {
         targetWidth = maxWidthForPortraitMode;
         targetHeight = maxHeightForPortraitMode;
         return new Pair<>(targetWidth, targetHeight);
+    }
+
+
+
+
+
+    //CAMERA ROTATION
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private int getRotationCompensation(String cameraId, Activity activity, Context context)
+            throws CameraAccessException {
+        // Get the device's current rotation relative to its "native" orientation.
+        // Then, from the ORIENTATIONS table, look up the angle the image must be
+        // rotated to compensate for the device's rotation.
+        int deviceRotation = activity.getWindowManager().getDefaultDisplay().getRotation();
+        int rotationCompensation = getResources().getConfiguration().orientation;
+
+        // On most devices, the sensor orientation is 90 degrees, but for some
+        // devices it is 270 degrees. For devices with a sensor orientation of
+        // 270, rotate the image an additional 180 ((270 + 270) % 360) degrees.
+        CameraManager cameraManager = (CameraManager) context.getSystemService(CAMERA_SERVICE);
+        int sensorOrientation = cameraManager
+                .getCameraCharacteristics(cameraId)
+                .get(CameraCharacteristics.SENSOR_ORIENTATION);
+        rotationCompensation = (rotationCompensation + sensorOrientation + 270) % 360;
+
+        // Return the corresponding FirebaseVisionImageMetadata rotation value.
+        int result;
+        switch (rotationCompensation) {
+            case 0:
+                result = FirebaseVisionImageMetadata.ROTATION_0;
+                break;
+            case 90:
+                result = FirebaseVisionImageMetadata.ROTATION_90;
+                break;
+            case 180:
+                result = FirebaseVisionImageMetadata.ROTATION_180;
+                break;
+            case 270:
+                result = FirebaseVisionImageMetadata.ROTATION_270;
+                break;
+            default:
+                result = FirebaseVisionImageMetadata.ROTATION_0;
+        }
+        return result;
     }
 
 }

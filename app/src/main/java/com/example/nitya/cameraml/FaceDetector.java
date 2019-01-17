@@ -86,19 +86,22 @@ public class FaceDetector {
             FaceGraphic faceGraphic = new FaceGraphic(graphicOverlay, face,String.valueOf(i));
             graphicOverlay.add(faceGraphic);
 
-            float smileProb = 0.0f;
+            double smileProb = 0.0f;
+            double notSmileProb=0.0f;
 
             // If classification was enabled:
             if (face.getSmilingProbability() != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {
                 smileProb = face.getSmilingProbability() * 100;
             }
+            smileProb = Math.round(smileProb*1000.0)/1000.0;
+            notSmileProb=Math.round((100-smileProb)*1000.0)/1000.0;
             String smile, precision;
             if (smileProb > 50.0) {
                 smile = "Smiling";
                 precision = "With precision of " + smileProb + " %";
             } else {
                 smile = "Not Smiling";
-                precision = "With precision of " + (100 - smileProb) + " %";
+                precision = "With precision of " + notSmileProb + " %";
 
             }
 

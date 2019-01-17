@@ -30,9 +30,15 @@ public class ViewIt extends AppCompatActivity {
         listView=findViewById(R.id.list);
 
         Intent intent=getIntent();
-
-        finalWord=intent.getStringArrayListExtra("words");
-        Log.i("msg", finalWord.get(0));
+        try {
+            finalWord = intent.getStringArrayListExtra("words");
+        }
+        catch (Exception e){
+            //if image not found jump back to main home page with a toast
+            Toast.makeText(getBaseContext(),"No data found please try again",Toast.LENGTH_LONG).show();
+            Intent select=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(select);
+        }
         contentview content=new contentview();
         listView.setAdapter(content);
     }

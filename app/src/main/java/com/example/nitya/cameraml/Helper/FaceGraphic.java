@@ -14,7 +14,7 @@ public class FaceGraphic extends GraphicOverlay.Graphic {
     private final Paint rectPaint,textPaint;
     FirebaseVisionFace face;
 
-    private static final int TEXT_COLOR= Color.RED;
+    private static final int TEXT_COLOR= Color.GREEN;
     private static final float TEXT_SIZE=70.0f;
     public static final float STROKE_WIDTH=5.0f;
 

@@ -11,26 +11,33 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.ml.vision.face.FirebaseVisionFace;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ViewFaces extends AppCompatActivity {
 
     ListView listView;
-    ArrayList<? extends Face> arr;
+    ArrayList<Face> arr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_faces);
 
+        arr=new ArrayList<>();
+
         listView=findViewById(R.id.faceList);
 
-        //Intent intent=getIntent();
-        //arr= (ArrayList<Face>) intent.getParcelableExtra("list");
+        Intent intent=getIntent();
+        ArrayList<String> face= intent.getStringArrayListExtra("face");
+        ArrayList<String> smile=intent.getStringArrayListExtra("smile");
+        ArrayList<String> precision=intent.getStringArrayListExtra("precision");
 
-        Bundle bundle=this.getIntent().getExtras();
-        arr=savedInstanceState.getParcelableArrayList("list");
+        for (int i=0;i<face.size();i++)
+            arr.add(new Face(face.get(i),smile.get(i),precision.get(i)));
+
         CustomAdapter customAdapter=new CustomAdapter();
         listView.setAdapter(customAdapter);
     }
@@ -63,11 +70,11 @@ public class ViewFaces extends AppCompatActivity {
 
             TextView smile=inflater.findViewById(R.id.textFace);
             TextView precision=inflater.findViewById(R.id.textPrecision);
-            ImageView image=inflater.findViewById(R.id.imageFace);
+            TextView image=inflater.findViewById(R.id.imageFace);
 
             smile.setText(getItem(i).getSmile());
             precision.setText(getItem(i).getAccuracy());
-            //image.setImageBitmap(getItem(i).getFace());
+            image.setText(getItem(i).getFace());
 
             return inflater;
         }

@@ -33,9 +33,12 @@ import java.util.List;
 
 public class FaceDetector {
 
-    ArrayList<Face> arrayList=new ArrayList<>();
+    ArrayList<String> fArray = new ArrayList<>();
+    ArrayList<String> smileArray = new ArrayList<>();
+    ArrayList<String> precArray = new ArrayList<>();
 
     public void detect(final GraphicOverlay graphicOverlay, final Bitmap bitmap, final Context context, final Button button) {
+        graphicOverlay.clear();
 
         FirebaseVisionFaceDetectorOptions highAccuracy =
                 new FirebaseVisionFaceDetectorOptions.Builder()
@@ -54,9 +57,9 @@ public class FaceDetector {
                         .addOnSuccessListener(new OnSuccessListener<List<FirebaseVisionFace>>() {
                             @Override
                             public void onSuccess(List<FirebaseVisionFace> firebaseVisionFaces) {
-                                Log.i("Wohhoo","success");
+                                Log.i("Wohhoo", "success");
 
-                                processFaceList(graphicOverlay,firebaseVisionFaces,context,button,bitmap);
+                                processFaceList(graphicOverlay, firebaseVisionFaces, context, button);
 
                             }
                         })
@@ -70,13 +73,17 @@ public class FaceDetector {
 
     }
 
-    private void processFaceList(GraphicOverlay graphicOverlay, List<FirebaseVisionFace> faces, final Context context, Button button,Bitmap bitmap) {
+    private void processFaceList(GraphicOverlay graphicOverlay, List<FirebaseVisionFace> faces, final Context context, Button button) {
+        int i=0;
+
+        graphicOverlay.clear();
 
         for (FirebaseVisionFace face : faces) {
+            i++;
 
             Log.i("wohhhooo2", "enterd");
 
-            FaceGraphic faceGraphic = new FaceGraphic(graphicOverlay, face);
+            FaceGraphic faceGraphic = new FaceGraphic(graphicOverlay, face,String.valueOf(i));
             graphicOverlay.add(faceGraphic);
 
             float smileProb = 0.0f;
@@ -92,27 +99,22 @@ public class FaceDetector {
             } else {
                 smile = "Not Smiling";
                 precision = "With precision of " + (100 - smileProb) + " %";
+
             }
 
-            Rect rect = new Rect(face.getBoundingBox());
-            Bitmap qwer = Bitmap.createBitmap(bitmap, rect.centerX(), rect.centerY(), 60, 60);
-
-            /*ByteArrayOutputStream bStream=new ByteArrayOutputStream();
-            qwer.compress(Bitmap.CompressFormat.PNG,100,bStream);
-            byte[] bytes=bStream.toByteArray();*/
-            arrayList.add(new Face(qwer, smile, precision));
+            fArray.add(String.valueOf(i));
+            smileArray.add(smile);
+            precArray.add(precision);
 
         }
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Bundle bundle=new Bundle();
-                //bundle.putParcelableArrayList("list", (ArrayList<? extends Parcelable>) arrayList);
-
-                Intent view = new Intent(context,ViewFaces.class);
-                view.putExtras(bundle);
+                Intent view = new Intent(context, ViewFaces.class);
+                view.putStringArrayListExtra("face",fArray);
+                view.putStringArrayListExtra("smile",smileArray);
+                view.putStringArrayListExtra("precision",precArray);
                 context.startActivity(view);
 
             }

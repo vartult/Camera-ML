@@ -3,14 +3,10 @@ package com.example.nitya.cameraml.Helper;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.Log;
 
-import com.google.firebase.ml.vision.document.FirebaseVisionDocumentText;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
-
-import java.util.List;
 
 public class TextGraphic extends GraphicOverlay.Graphic {
 

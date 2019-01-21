@@ -94,6 +94,7 @@ public class TextRecognize {
 
                 Intent intent=new Intent(context,ViewIt.class);
                 intent.putStringArrayListExtra("words",words);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
             }

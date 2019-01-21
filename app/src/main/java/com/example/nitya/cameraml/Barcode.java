@@ -96,6 +96,7 @@ public class Barcode {
 
                 Intent intent=new Intent(context,ViewIt.class);
                 intent.putStringArrayListExtra("words",arrBarcode);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
             }

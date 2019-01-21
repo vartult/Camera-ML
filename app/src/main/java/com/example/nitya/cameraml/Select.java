@@ -152,7 +152,7 @@ public class Select extends AppCompatActivity {
                             (int) (picture.getWidth() / scaleFactor),
                             (int) (picture.getHeight() / scaleFactor),
                             false);
-            Integer result=0;
+            /*Integer result=0;
             try {
                 result=getRotationCompensation("my_camera_id",getParent(), getApplicationContext());
             } catch (CameraAccessException e) {
@@ -162,7 +162,7 @@ public class Select extends AppCompatActivity {
 
             matrix.postRotate(result);
 
-            picture = Bitmap.createBitmap(picture, 0, 0, picture.getWidth(), picture.getHeight(), matrix, true);
+            picture = Bitmap.createBitmap(picture, 0, 0, picture.getWidth(), picture.getHeight(), matrix, true);*/
 
             imageView.setImageBitmap(picture);
 

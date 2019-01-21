@@ -32,6 +32,7 @@ import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.nitya.cameraml.Helper.GraphicOverlay;
@@ -169,7 +170,7 @@ public class Select extends AppCompatActivity {
             if (flag==1){
                 //text recognition
                  TextRecognize obj=new TextRecognize();
-                obj.recognizeText(graphicOverlay,picture,getApplicationContext(),viewall);
+                obj.recognizeText(graphicOverlay,picture,Select.this,viewall);
             }
 
             if (flag==2){

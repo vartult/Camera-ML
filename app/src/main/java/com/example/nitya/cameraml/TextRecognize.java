@@ -5,10 +5,12 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.example.nitya.cameraml.Helper.GraphicOverlay;
 import com.example.nitya.cameraml.Helper.TextGraphic;
@@ -23,12 +25,15 @@ import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 import java.util.ArrayList;
 import java.util.List;
 
+import dmax.dialog.SpotsDialog;
+
 public class TextRecognize {
 
 
     public static void recognizeText(final GraphicOverlay graphicOverlay, Bitmap bitmap, final Context context, final Button viewall) {
 
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
+        graphicOverlay.clear();
 
         FirebaseVisionTextRecognizer detector = FirebaseVision.getInstance()
                 .getOnDeviceTextRecognizer();
@@ -55,39 +60,46 @@ public class TextRecognize {
                                 });
     }
 
-    private static void drawTextResult(final GraphicOverlay graphicOverlay, FirebaseVisionText result, final Context context, Button viewall) {
-
+    private static void drawTextResult(final GraphicOverlay graphicOverlay, final FirebaseVisionText result, final Context context, Button viewall){
+        AlertDialog dialog= new SpotsDialog.Builder().setContext(context).build();
+        dialog.show();
         final ArrayList<String> words=new ArrayList<>();
 
+                for (FirebaseVisionText.TextBlock block : result.getTextBlocks()) {
 
-        for (FirebaseVisionText.TextBlock block : result.getTextBlocks()) {
-
-            String blockText = block.getText();
-            Log.i("Block Text", blockText);
-            //words.add(blockText);
-            List<FirebaseVisionText.Line> lines=block.getLines();
+                    String blockText = block.getText();
+                    Log.i("Block Text", blockText);
+                    //words.add(blockText);
+                    List<FirebaseVisionText.Line> lines = block.getLines();
 
 
-        graphicOverlay.clear();
+                    graphicOverlay.clear();
 
-        for(FirebaseVisionText.Line line:lines ) {
-                String linetext=line.getText();
-                words.add(linetext);
+                    for (FirebaseVisionText.Line line : lines) {
+                        String linetext = line.getText();
+                        words.add(linetext);
 
-                GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, line);
-                graphicOverlay.add(textGraphic);
-                List<FirebaseVisionText.Element> elements = line.getElements();
+                        GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, line);
+                        graphicOverlay.add(textGraphic);
+                        List<FirebaseVisionText.Element> elements = line.getElements();
 
-                for (FirebaseVisionText.Element element:elements){
+                        for (FirebaseVisionText.Element element : elements) {
 
-                    Log.i("element Text",element.getText());
-                    //words.add(element.getText());
+                            Log.i("element Text", element.getText());
+                            //words.add(element.getText());
 
-                    //GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, element);
-                    //graphicOverlay.add(textGraphic);
+                            //GraphicOverlay.Graphic textGraphic = new TextGraphic(graphicOverlay, element);
+                            //graphicOverlay.add(textGraphic);
+                        }
+                    }
+
                 }
-            }
-        }
+                dialog.dismiss();
+
+
+
+
+
         viewall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

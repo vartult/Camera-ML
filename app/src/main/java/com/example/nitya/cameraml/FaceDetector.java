@@ -87,7 +87,7 @@ public class FaceDetector {
             graphicOverlay.add(faceGraphic);
 
             double smileProb = 0.0f;
-            double notSmileProb=0.0f;
+            double notSmileProb;
 
             // If classification was enabled:
             if (face.getSmilingProbability() != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {

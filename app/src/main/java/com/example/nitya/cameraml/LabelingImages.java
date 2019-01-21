@@ -68,6 +68,7 @@ public class LabelingImages {
 
                 Intent intent=new Intent(context,ViewIt.class);
                 intent.putStringArrayListExtra("words",arrLabel);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
             }

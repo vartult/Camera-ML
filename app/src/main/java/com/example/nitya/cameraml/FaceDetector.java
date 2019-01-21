@@ -118,6 +118,7 @@ public class FaceDetector {
                 view.putStringArrayListExtra("face",fArray);
                 view.putStringArrayListExtra("smile",smileArray);
                 view.putStringArrayListExtra("precision",precArray);
+                view.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(view);
 
             }

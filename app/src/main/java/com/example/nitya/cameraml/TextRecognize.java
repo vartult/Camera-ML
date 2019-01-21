@@ -61,8 +61,7 @@ public class TextRecognize {
     }
 
     private static void drawTextResult(final GraphicOverlay graphicOverlay, final FirebaseVisionText result, final Context context, Button viewall){
-        AlertDialog dialog= new SpotsDialog.Builder().setContext(context).build();
-        dialog.show();
+
         final ArrayList<String> words=new ArrayList<>();
 
                 for (FirebaseVisionText.TextBlock block : result.getTextBlocks()) {
@@ -94,11 +93,6 @@ public class TextRecognize {
                     }
 
                 }
-                dialog.dismiss();
-
-
-
-
 
         viewall.setOnClickListener(new View.OnClickListener() {
             @Override

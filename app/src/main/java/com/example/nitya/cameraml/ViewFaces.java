@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.ml.vision.face.FirebaseVisionFace;
 
@@ -34,6 +35,13 @@ public class ViewFaces extends AppCompatActivity {
         ArrayList<String> face= intent.getStringArrayListExtra("face");
         ArrayList<String> smile=intent.getStringArrayListExtra("smile");
         ArrayList<String> precision=intent.getStringArrayListExtra("precision");
+
+        if(face.isEmpty()) {
+            //if image not found jump back to main home page with a toast
+            Toast.makeText(getBaseContext(), "No faces found", Toast.LENGTH_LONG).show();
+            Intent select = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(select);
+        }
 
         for (int i=0;i<face.size();i++)
             arr.add(new Face(face.get(i),smile.get(i),precision.get(i)));

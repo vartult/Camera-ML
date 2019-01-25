@@ -1,12 +1,10 @@
-package com.example.nitya.cameraml.Helper;
+package com.cellfishpool.app.cameraml.Helper;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 
-import com.example.nitya.cameraml.Helper.GraphicOverlay;
 import com.google.firebase.ml.vision.face.FirebaseVisionFace;
 
 public class FaceGraphic extends GraphicOverlay.Graphic {

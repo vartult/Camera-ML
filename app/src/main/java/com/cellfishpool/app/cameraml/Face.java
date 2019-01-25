@@ -1,9 +1,4 @@
-package com.example.nitya.cameraml;
-
-import android.graphics.Bitmap;
-import android.os.Parcelable;
-
-import com.google.firebase.ml.vision.face.FirebaseVisionFace;
+package com.cellfishpool.app.cameraml;
 
 public class Face {
 

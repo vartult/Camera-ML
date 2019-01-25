@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nitya.cameraml">
+    package="com.cellfishpool.app.cameraml">
 
     <uses-feature android:name="android.hardware.camera" />
     <!--
@@ -10,8 +10,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- >>>>>>> 7e4dfa7d4132e32cd20ff06663c6c73190239fd8 -->
-
-    <uses-permission android:name="android.permission.CAMERA" />
     <!-- <uses-feature android:name="android.hardware.camera" android:required="true"/> -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -44,7 +42,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.example.nitya.cameraml.provider"
+            android:authorities="com.cellfishpool.app.cameraml.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

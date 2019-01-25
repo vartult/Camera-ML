@@ -4,7 +4,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.nitya.cameraml"
+        applicationId "com.cellfishpool.app.cameraml"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1

@@ -1,26 +1,19 @@
-package com.example.nitya.cameraml;
+package com.cellfishpool.app.cameraml;
 
-import android.Manifest;
 import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
-import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -32,36 +25,15 @@ import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.nitya.cameraml.Helper.GraphicOverlay;
-import com.example.nitya.cameraml.Helper.TextGraphic;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.vision.L;
-import com.google.firebase.ml.vision.FirebaseVision;
-import com.google.firebase.ml.vision.common.FirebaseVisionImage;
+import com.cellfishpool.app.cameraml.Helper.GraphicOverlay;
 import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata;
-import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions;
-import com.google.firebase.ml.vision.text.FirebaseVisionText;
-import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
-import com.wonderkiln.camerakit.CameraKitError;
-import com.wonderkiln.camerakit.CameraKitEvent;
-import com.wonderkiln.camerakit.CameraKitEventListener;
-import com.wonderkiln.camerakit.CameraKitImage;
-import com.wonderkiln.camerakit.CameraKitVideo;
-import com.wonderkiln.camerakit.CameraView;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -77,6 +49,7 @@ public class Select extends AppCompatActivity {
     GraphicOverlay graphicOverlay;
     Button viewall,click;
     ArrayList<String> words;
+    File photoFile=new File(String.valueOf(Uri.parse("android.resource://com.cellfishpool.app.cameraml/drawable/copy")));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,33 +61,20 @@ public class Select extends AppCompatActivity {
         viewall = findViewById(R.id.viewall);
         click = findViewById(R.id.click);
 
+
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 words = new ArrayList<>();
+                if(allPermissionsGranted()){
+                    executeAfterPermission();
 
-                if (allPermissionsGranted()) {
-                    Intent intent = getIntent();
-                    flag = intent.getIntExtra("flag", 0);
-
-                    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                        Log.i("flagggggg", String.valueOf(flag));
-                        File photoFile = null;
-                        try {
-                            photoFile = createImageFile();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            return;
-                        }
-                        Uri photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", photoFile);
-                        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-                        startActivityForResult(takePictureIntent, 100);
-                    }
-                } else {
-                    getRuntimePermissions();
                 }
-
+                else {
+                    getRuntimePermissions();
+                    if(allPermissionsGranted())
+                        executeAfterPermission();
+                }
             }
 });
 
@@ -141,18 +101,25 @@ public class Select extends AppCompatActivity {
 
 
             // Determine how much to scale down the image
-            float scaleFactor =
-                    Math.max(
-                            (float) picture.getWidth() / (float) targetWidth,
-                            (float) picture.getHeight() / (float) maxHeight);
+
+            try {
+                float scaleFactor =
+                        Math.max(
+                                (float) picture.getWidth() / (float) targetWidth,
+                                (float) picture.getHeight() / (float) maxHeight);
 
 
-            picture=
-                    Bitmap.createScaledBitmap(
-                            picture,
-                            (int) (picture.getWidth() / scaleFactor),
-                            (int) (picture.getHeight() / scaleFactor),
-                            false);
+                picture =
+                        Bitmap.createScaledBitmap(
+                                picture,
+                                (int) (picture.getWidth() / scaleFactor),
+                                (int) (picture.getHeight() / scaleFactor),
+                                false);
+            }catch (NullPointerException e){
+                /*Toast.makeText(getBaseContext(), "No data found please try again", Toast.LENGTH_LONG).show();
+                Intent select = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(select);*/
+            }
             /*Integer result=0;
             try {
                 result=getRotationCompensation("my_camera_id",getParent(), getApplicationContext());
@@ -200,6 +167,30 @@ public class Select extends AppCompatActivity {
         }
 
     }
+
+    public void executeAfterPermission(){
+            Intent intent = getIntent();
+            flag = intent.getIntExtra("flag", 0);
+
+
+
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                Log.i("flagggggg", String.valueOf(flag));
+                 //photoFile = null;
+                try {
+                    Log.i("new file","new file created");
+                    photoFile = createImageFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return;
+                }
+                Uri photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", photoFile);
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                startActivityForResult(takePictureIntent, 100);
+            }
+
+    }
     private boolean allPermissionsGranted() {
         for (String permission : getRequiredPermissions()) {
             if (!isPermissionGranted(this, permission)) {
@@ -242,9 +233,9 @@ public class Select extends AppCompatActivity {
         if (allPermissionsGranted()) {
             Intent intent = getIntent();
             flag = intent.getIntExtra("flag", 0);
-            Log.i("flagggggg111111111", String.valueOf(flag));
+            /*Log.i("flagggggg111111111", String.valueOf(flag));
             Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
-            startActivityForResult(cameraIntent, 100);
+            startActivityForResult(cameraIntent, 100);*/
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }

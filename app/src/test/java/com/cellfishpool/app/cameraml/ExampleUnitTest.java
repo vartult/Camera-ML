@@ -1,4 +1,4 @@
-package com.example.nitya.cameraml;
+package com.cellfishpool.app.cameraml;
 
 import org.junit.Test;
 

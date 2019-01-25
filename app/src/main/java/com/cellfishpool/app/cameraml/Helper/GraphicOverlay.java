@@ -1,4 +1,4 @@
-package com.example.nitya.cameraml.Helper;
+package com.cellfishpool.app.cameraml.Helper;
 
 import android.content.Context;
 import android.graphics.Canvas;

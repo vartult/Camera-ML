@@ -1,33 +1,25 @@
-package com.example.nitya.cameraml;
+package com.cellfishpool.app.cameraml;
 
 import android.content.Context;
 import android.content.Intent;
 
 import android.graphics.Bitmap;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.nitya.cameraml.Helper.FaceGraphic;
-import com.example.nitya.cameraml.Helper.GraphicOverlay;
+import com.cellfishpool.app.cameraml.Helper.FaceGraphic;
+import com.cellfishpool.app.cameraml.Helper.GraphicOverlay;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
-import com.google.firebase.ml.vision.common.FirebaseVisionPoint;
 import com.google.firebase.ml.vision.face.FirebaseVisionFace;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
-import com.google.firebase.ml.vision.face.FirebaseVisionFaceLandmark;
 
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 

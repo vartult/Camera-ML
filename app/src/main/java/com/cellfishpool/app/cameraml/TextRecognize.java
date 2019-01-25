@@ -1,22 +1,18 @@
 
-package com.example.nitya.cameraml;
+package com.cellfishpool.app.cameraml;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 
-import com.example.nitya.cameraml.Helper.GraphicOverlay;
-import com.example.nitya.cameraml.Helper.TextGraphic;
+import com.cellfishpool.app.cameraml.Helper.GraphicOverlay;
+import com.cellfishpool.app.cameraml.Helper.TextGraphic;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.vision.L;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
@@ -24,8 +20,6 @@ import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import dmax.dialog.SpotsDialog;
 
 public class TextRecognize {
 

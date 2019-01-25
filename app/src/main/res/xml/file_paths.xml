@@ -2,5 +2,5 @@
 <paths>
     <external-path
         name="my_images"
-        path="Android/data/com.example.nitya.cameraml/files/Pictures"/>
+        path="Android/data/com.cellfishpool.app.cameraml/files/Pictures"/>
 </paths>

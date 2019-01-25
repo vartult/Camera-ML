@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:57983168054:android:5de56f5a433009bb",
         "android_client_info": {
-          "package_name": "com.example.nitya.cameraml"
+          "package_name": "com.cellfishpool.app.cameraml"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "57983168054-ja85j4ti5n6u8l470jun8qs666e0vfc4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.nitya.cameraml",
+            "package_name": "com.cellfishpool.app.cameraml",
             "certificate_hash": "6044194bf9e9efede48cce103c094c69917be006"
           }
         },

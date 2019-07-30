@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         btnBarcode=findViewById(R.id.btnBarcode);
         btnFaces=findViewById(R.id.btnFaces);
         btnImage=findViewById(R.id.btnImages);
-        imageView=findViewById(R.id.imagebla);
 
 
         btnText.setOnClickListener(new View.OnClickListener() {

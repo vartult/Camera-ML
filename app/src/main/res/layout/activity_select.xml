@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Select"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/black">
 
    <ImageView
        android:layout_width="match_parent"
@@ -14,11 +14,11 @@
 
    <com.cellfishpool.app.cameraml.Helper.GraphicOverlay
        android:id="@+id/graphic"
-       android:layout_width="380dp"
-       android:layout_height="510dp" />
-
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
 
    <Button
+
        android:id="@+id/viewall"
        android:layout_marginBottom="10dp"
        android:layout_width="wrap_content"

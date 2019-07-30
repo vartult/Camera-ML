@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
-    <ImageView
-
-        android:id="@+id/imagebla"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:src="@drawable/back1" />
 
     <Button
-        android:layout_margin="5dp"
-        android:id="@+id/btn"
-        android:layout_width="match_parent"
+        android:id="@+id/btnText"
+        android:layout_width="200dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:text="Text Detection"
+        android:textColor="@color/bc"
+        app:layout_constraintBottom_toTopOf="@+id/btnBarcode"
+        app:layout_constraintEnd_toStartOf="@+id/btnFaces"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.913" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/holo_blue_dark"
-        android:text="WHAT DO I DO NOW?"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-        android:textStyle="bold" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        android:text="CAMERA ML"
+        android:textColor="@color/bc"
+        android:textSize="90sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <GridLayout
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:rowCount="2"
-        android:columnCount="2"
-        android:layout_marginTop="10dp">
+    <Button
+        android:id="@+id/btnFaces"
+        android:layout_width="200dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:text="Face Detection"
+        android:textColor="@color/bc"
+        app:layout_constraintBottom_toTopOf="@+id/btnImages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.913" />
 
-        <Button
-            android:id="@+id/btnText"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:text="Text Recognition" />
+    <Button
+        android:id="@+id/btnBarcode"
+        android:layout_width="200dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/mybutton"
+        android:text="Barcode"
+        android:textColor="@color/bc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnImages"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/btnBarcode"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:text="Scan Barcode" />
-
-        <Button
-            android:id="@+id/btnFaces"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:text="Detect Faces"/>
-
-        <Button
-            android:id="@+id/btnImages"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:text="Label Images"/>
-
-    </GridLayout>
-
-
-
-
-
-</LinearLayout>
+    <Button
+        android:id="@+id/btnImages"
+        android:layout_width="200dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/mybutton"
+        android:text="Image Labeling"
+        android:textColor="@color/bc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

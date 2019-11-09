@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Nov 10 02:02:58 IST 2019
+#Sun Nov 10 04:13:55 IST 2019
 56.path=lib/x86/libjpgd.so
 5.base=C\:\\Users\\Vartul Tripathi\\AndroidStudioProjects\\Camera-ML\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 42.base=C\:\\Users\\Vartul Tripathi\\AndroidStudioProjects\\Camera-ML\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0

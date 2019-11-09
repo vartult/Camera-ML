@@ -26,11 +26,11 @@ public final class R {
 
         public static final int auto = 0x7f080022;
         public static final int back = 0x7f080023;
-        public static final int continuous = 0x7f08003c;
-        public static final int front = 0x7f080053;
-        public static final int off = 0x7f08007d;
-        public static final int on = 0x7f08007e;
-        public static final int torch = 0x7f0800c3;
+        public static final int continuous = 0x7f08003b;
+        public static final int front = 0x7f080052;
+        public static final int off = 0x7f08007b;
+        public static final int on = 0x7f08007c;
+        public static final int torch = 0x7f0800c1;
     }
     public static final class string {
         private string() {}

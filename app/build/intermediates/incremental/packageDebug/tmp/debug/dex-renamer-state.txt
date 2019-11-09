@@ -1,7 +1,7 @@
-#Tue Jul 30 19:29:47 IST 2019
-base.0=/home/vartul/AndroidStudioProjects/Camera-ML/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+#Sun Nov 10 02:02:56 IST 2019
+base.0=C\:\\Users\\Vartul Tripathi\\AndroidStudioProjects\\Camera-ML\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/vartul/AndroidStudioProjects/Camera-ML/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+base.1=C\:\\Users\\Vartul Tripathi\\AndroidStudioProjects\\Camera-ML\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out

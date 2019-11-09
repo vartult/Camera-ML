@@ -1,8 +1,8 @@
 package com.cellfishpool.app.cameraml;
 
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnText=findViewById(R.id.btnText);
         btnBarcode=findViewById(R.id.btnBarcode);
         btnFaces=findViewById(R.id.btnFaces);
-        btnImage=findViewById(R.id.btnImages);
+        //btnImage=findViewById(R.id.btnImages);
 
 
         btnText.setOnClickListener(new View.OnClickListener() {
@@ -37,16 +37,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        btnImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent select=new Intent(MainActivity.this,Select.class);
-                select.putExtra("flag",2);
-                startActivityForResult(select,REQUEST_CODE);
-
-            }
-        });
+//        btnImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent select=new Intent(MainActivity.this,Select.class);
+//                select.putExtra("flag",2);
+//                startActivityForResult(select,REQUEST_CODE);
+//
+//            }
+//        });
 
 
         btnFaces.setOnClickListener(new View.OnClickListener() {

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/vartul/AndroidStudioProjects/Camera-ML/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "C:\\Users\\Vartul Tripathi\\AndroidStudioProjects\\Camera-ML\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/f2ac09a8ead97ddd442adf1af5675e02/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\7528728f598d94effe2fac1eaaf567d3\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\082edad39e5ceb42498f9babcb23020b\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,558 +1,566 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:2:1-24:12
-MERGED from [com.google.firebase:firebase-ml-vision:18.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/34390f34f6eb97da1230e300acb7b232/AndroidManifest.xml:2:1-8:12
-MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d1988b10e807fb748e01a805b2620a42/AndroidManifest.xml:2:1-17:12
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:2:1-27:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/f2ac09a8ead97ddd442adf1af5675e02/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/c29376b06f68f8b02e4edc40a8a673b4/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a025bab74f302a5ebae9acf74e31f0b5/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/481c8a50fca0bcfe2822e07553adb0cc/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ecc598b8919b7fdd9d7d7551b4846587/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d7da1283507374e6fdac882653de759/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a83420bb72de304f42438ac609895479/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/04d982aed47b61790d8938a07a091219/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-ml-common:16.1.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/3de3aadad65ae0c5a7334f2621764041/AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8f2190971c5d480df116f5a93a3b316f/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/667f3cbb80c9c29669a77c707740a9aa/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/1c6c6bf5361af38f6a27893e2d36e131/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-core:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/a0a1d993b72d34fad42337a3315ecb6a/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:17:1-34:12
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d955b7e935a481b139bd425ab5a1303/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:17:1-59:12
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/0e1f2f9a95a108ebb05dded4783d4c85/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:2:1-17:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/22eb3f16e8759bb5d76b0911e0abc4f6/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d25114709478c0ffe0df8a0d89ea1f8/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/dfd28d4fdea9e3534d505de97c76c546/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/15e5d48a445bbaacf74dc50435889bf6/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b120c2ac3cb45c16ed0f858ad1a77e2a/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/3f00e5e8c75aed137a542e04377e6892/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/c7d7c2534cdb58647d4b09f68210b22e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/3d088dbeaebd4cdc8e567f619e867bb5/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.d-max:spots-dialog:1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/233a3a177c9ad0fd5f607b82d066ea8d/AndroidManifest.xml:2:1-13:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/e67bf1aab68f8dea1944a3996b85ea37/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7b406b55e827c751db02a01a05e768ee/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/50bc9c9b23bd5ca2744d585c1cbc1b6e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7f3134e4f21c7a6e59e171eb92b230a8/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/055ee25a68c1836805ce11e9e9b42c3a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/3b63f13d76f9de7253a37f49bbe37fcb/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/76fe1ae3e05095b7a1b7818622c21c5d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/cb7eb3b353e5e4cd790cf1bea7cda6a9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ddba25ee38cbccc3e4af4a760fe02509/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/e232f2f53ecfeee70c0c2621a80dc0ee/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b2e4fc204fc26d43b63971818a6168ba/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/fff3c845c8c85c7db9d758bb503d1a69/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7a4f2001e809490c08f49b7de0263478/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ced0683c66b6fcb96612ad6ba43ea8cb/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d91fa1c0f57f0ee91d21d831895432f2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:exifinterface:27.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a9ede2c50d5db62f23332035f16f088e/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/b368a3c1091f1142eafdb1c2a06e9980/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ba9e13289eeccc29f54129b502321be5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ac1f05244ae09f6a19113d55b5b0b712/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/0580a200005acc5a2b3a6c30ce46ed80/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/6ed072be873a9d8e5c8344dea405172a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6355561af1f6a9f8ae06cc63a4f5cfb5/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/b0c1e65ceeae9a6352c700ff72c69d17/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5ddd332d64eaa2914cfa25e1fbf5e71f/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f951a1162cf2d929ce28fc96842a870/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-ml-vision:18.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e9d07e8937eeb10280efc5bef3962827\AndroidManifest.xml:2:1-8:12
+MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f63a51eb25cf814369288097019630f9\AndroidManifest.xml:2:1-17:12
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:2:1-27:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\7528728f598d94effe2fac1eaaf567d3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e0cb888c4744eafdc809e4757b843550\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3996e58a5c8d8feb729f41b4c4687bef\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6a6c474f80897c2755d0c02335f93532\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d8dffb761f73cf5d0ef65cfbdaa827e8\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0e257ec953b88a8acf660af5bfa655d5\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\68367390a72ee6e52d4a6d462877ac41\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ea5bb58f22cdf1718df6ff26ab730127\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-ml-common:16.1.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\47b5847fb8db9a88c53cc6a4c72eafb0\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\1ff17dca2e31cbe329c825d7208b882f\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\09411570b5b6e5f8b73e00eec981c4ac\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6e396693648cda099fef5b3f3e04479d\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ce6725fae88ebf596ea1e3b0afea81bd\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:17:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\4758b575bc43a1c355f41e7e94b2efe3\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\18c2b57dbee0188a86c8dbae98773211\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\be73d5e6cbf5e2ef0c93eca15772cf0f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e3cefc339bf1b2b7724bbd70b9a2c10f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c8320a66f4d80fae5ac9119557a007bd\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\fde9f559aa5bf25ffd91f8b3fa8f5061\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0683feca163bf347cc060a181c3042db\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9c6fcfc3e59f50690169e5abfe2f7b8f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\280d4732de0aeb0dd4c58918733ebc68\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\def7c1cc7bd72a192593dd97ac4c63b4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.d-max:spots-dialog:1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aaee1ffc38b47f61c57cc74a01970dea\AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e13fb557a226465ba9ed1d690e8e1ad5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\2f6df77beb4276b740b41bc00d5cf4c2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\7e82e75c64d56ee8c0646052065c166e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\96be97d4a8ef53558dc3e1430501dce5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\53877fa54423b33c1edc7f082633fa04\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\54a6fa8ef4c4d7c935665255fccc6901\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\239e96b2a4b32083d235c0f82c75b8fe\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\8804f5f4c4af835c6acf578713830c22\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ac58c23971c75d47d500bb9b3aeede4a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\69f75e1cf4ad900768d1bb5a75448e1a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0895820a6b8a5db99cf913f17af0f67d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3c43dec2a1e3ea3889ddb693a698157b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\bfe2f62ba9c2846daab967bf7116ee6d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\082edad39e5ceb42498f9babcb23020b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aeebc2fc985ccc68990220369c658e59\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0db14b55a991a359a6d47e0ff6f7221a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e801306c4448551224f93a12207df727\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\5f4f4e5ea0ccc9861c78baee5712ef23\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ab84383fd62f3ec13d73e7304ad593a1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d1a3944ccaed3f9c54f841bf1a4e2989\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d0b64b64a334efb7c2f1ef2c425adf6c\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0feeffc77307d0f54bc1a9ad4697cc22\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6c33789430e78dfffccd801403925f3b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\48030eaaf59e9971bcc009faad0f3c92\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6850030e40bbef64fe38a1b119330c79\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\34f00f80f10996f7ea2986222ad476bf\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
 	package
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:3:5-44
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:3:5-44
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:1-55:12
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:2:11-69
+supports-screens
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:4:5-10:11
+	android:largeScreens
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:5:9-36
+	android:smallScreens
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:6:9-36
+	android:normalScreens
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:7:9-37
 uses-feature#android.hardware.camera
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:5:5-60
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:11:5-13:36
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:11:5-13:36
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:14:5-60
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:14:5-60
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:11:5-60
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:11:5-13:36
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:11:5-13:36
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:14:5-60
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:14:5-60
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:5:19-57
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:11:19-57
 uses-permission#android.permission.CAMERA
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:10:5-65
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:7:5-65
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:7:5-65
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:11:5-65
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:11:5-65
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:16:5-65
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:7:5-65
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:7:5-65
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:11:5-65
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:11:5-65
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:10:22-62
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:16:22-62
 uses-permission#android.permission.INTERNET
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:23:5-67
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:17:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:11:22-64
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:17:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:14:5-81
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:9:5-81
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:9:5-81
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:10:5-81
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:10:5-81
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:20:5-81
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:9:5-81
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:9:5-81
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:10:5-81
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:14:22-78
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:20:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:15:5-80
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:21:5-80
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:15:22-77
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:21:22-77
 application
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:17:5-53:19
-MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d1988b10e807fb748e01a805b2620a42/AndroidManifest.xml:11:5-15:19
-MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d1988b10e807fb748e01a805b2620a42/AndroidManifest.xml:11:5-15:19
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:25:5-20
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:25:5-20
-MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a025bab74f302a5ebae9acf74e31f0b5/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a025bab74f302a5ebae9acf74e31f0b5/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/481c8a50fca0bcfe2822e07553adb0cc/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/481c8a50fca0bcfe2822e07553adb0cc/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d7da1283507374e6fdac882653de759/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d7da1283507374e6fdac882653de759/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a83420bb72de304f42438ac609895479/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a83420bb72de304f42438ac609895479/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/04d982aed47b61790d8938a07a091219/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/04d982aed47b61790d8938a07a091219/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8f2190971c5d480df116f5a93a3b316f/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8f2190971c5d480df116f5a93a3b316f/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/1c6c6bf5361af38f6a27893e2d36e131/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/1c6c6bf5361af38f6a27893e2d36e131/AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/a0a1d993b72d34fad42337a3315ecb6a/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/a0a1d993b72d34fad42337a3315ecb6a/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:26:5-32:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d955b7e935a481b139bd425ab5a1303/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d955b7e935a481b139bd425ab5a1303/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/0e1f2f9a95a108ebb05dded4783d4c85/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/0e1f2f9a95a108ebb05dded4783d4c85/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/22eb3f16e8759bb5d76b0911e0abc4f6/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/22eb3f16e8759bb5d76b0911e0abc4f6/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d25114709478c0ffe0df8a0d89ea1f8/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d25114709478c0ffe0df8a0d89ea1f8/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/dfd28d4fdea9e3534d505de97c76c546/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/dfd28d4fdea9e3534d505de97c76c546/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/15e5d48a445bbaacf74dc50435889bf6/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/15e5d48a445bbaacf74dc50435889bf6/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b120c2ac3cb45c16ed0f858ad1a77e2a/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b120c2ac3cb45c16ed0f858ad1a77e2a/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/3d088dbeaebd4cdc8e567f619e867bb5/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/3d088dbeaebd4cdc8e567f619e867bb5/AndroidManifest.xml:9:5-20
-MERGED from [com.github.d-max:spots-dialog:1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/233a3a177c9ad0fd5f607b82d066ea8d/AndroidManifest.xml:11:5-20
-MERGED from [com.github.d-max:spots-dialog:1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/233a3a177c9ad0fd5f607b82d066ea8d/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support:support-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ced0683c66b6fcb96612ad6ba43ea8cb/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ced0683c66b6fcb96612ad6ba43ea8cb/AndroidManifest.xml:22:5-23:19
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:23:5-62:19
+MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f63a51eb25cf814369288097019630f9\AndroidManifest.xml:11:5-15:19
+MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f63a51eb25cf814369288097019630f9\AndroidManifest.xml:11:5-15:19
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:25:5-20
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:25:5-20
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3996e58a5c8d8feb729f41b4c4687bef\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3996e58a5c8d8feb729f41b4c4687bef\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6a6c474f80897c2755d0c02335f93532\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6a6c474f80897c2755d0c02335f93532\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0e257ec953b88a8acf660af5bfa655d5\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0e257ec953b88a8acf660af5bfa655d5\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\68367390a72ee6e52d4a6d462877ac41\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\68367390a72ee6e52d4a6d462877ac41\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ea5bb58f22cdf1718df6ff26ab730127\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ea5bb58f22cdf1718df6ff26ab730127\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\1ff17dca2e31cbe329c825d7208b882f\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\1ff17dca2e31cbe329c825d7208b882f\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6e396693648cda099fef5b3f3e04479d\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6e396693648cda099fef5b3f3e04479d\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ce6725fae88ebf596ea1e3b0afea81bd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ce6725fae88ebf596ea1e3b0afea81bd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:26:5-32:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\4758b575bc43a1c355f41e7e94b2efe3\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\4758b575bc43a1c355f41e7e94b2efe3\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\18c2b57dbee0188a86c8dbae98773211\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\18c2b57dbee0188a86c8dbae98773211\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\be73d5e6cbf5e2ef0c93eca15772cf0f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\be73d5e6cbf5e2ef0c93eca15772cf0f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e3cefc339bf1b2b7724bbd70b9a2c10f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e3cefc339bf1b2b7724bbd70b9a2c10f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c8320a66f4d80fae5ac9119557a007bd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c8320a66f4d80fae5ac9119557a007bd\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\fde9f559aa5bf25ffd91f8b3fa8f5061\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\fde9f559aa5bf25ffd91f8b3fa8f5061\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0683feca163bf347cc060a181c3042db\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0683feca163bf347cc060a181c3042db\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\def7c1cc7bd72a192593dd97ac4c63b4\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\def7c1cc7bd72a192593dd97ac4c63b4\AndroidManifest.xml:9:5-20
+MERGED from [com.github.d-max:spots-dialog:1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aaee1ffc38b47f61c57cc74a01970dea\AndroidManifest.xml:11:5-20
+MERGED from [com.github.d-max:spots-dialog:1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aaee1ffc38b47f61c57cc74a01970dea\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\082edad39e5ceb42498f9babcb23020b\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\082edad39e5ceb42498f9babcb23020b\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aeebc2fc985ccc68990220369c658e59\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aeebc2fc985ccc68990220369c658e59\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\082edad39e5ceb42498f9babcb23020b\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:28:9-35
 	android:label
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:20:9-41
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:27:9-41
 	android:icon
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:19:9-59
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:26:9-59
 	android:allowBackup
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:25:9-35
 	android:theme
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:22:9-40
-activity#com.cellfishpool.app.cameraml.MainActivity
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:23:9-31:20
-	android:screenOrientation
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:25:13-49
-	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:24:13-41
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:26:13-30:29
-action#android.intent.action.MAIN
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:27:17-69
-	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:27:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:29:17-77
-	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:29:27-74
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:29:9-40
 meta-data#com.google.firebase.ml.vision.DEPENDENCIES
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:33:9-35:47
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:30:9-33:47
 	android:value
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:35:13-44
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:33:13-44
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:34:13-70
-activity#com.cellfishpool.app.cameraml.Select
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:37:9-39:52
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:32:13-70
+activity#com.cellfishpool.app.cameraml.MainActivity
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:34:9-42:20
 	android:screenOrientation
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:39:13-49
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:36:13-49
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:38:13-35
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:35:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:37:13-41:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:38:17-69
+	android:name
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:38:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:40:17-77
+	android:name
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:40:27-74
+activity#com.cellfishpool.app.cameraml.Select
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:46:9-48:52
+	android:screenOrientation
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:48:13-49
+	android:name
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:47:13-35
 activity#com.cellfishpool.app.cameraml.ViewIt
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:40:9-44
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:49:9-44
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:40:19-41
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:49:19-41
 provider#android.support.v4.content.FileProvider
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:42:9-50:20
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:51:9-59:20
 	android:grantUriPermissions
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:46:13-47
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:55:13-47
 	android:authorities
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:44:13-73
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:53:13-73
 	android:exported
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:54:13-37
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:43:13-67
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:52:13-67
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:47:13-49:54
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:56:13-58:54
 	android:resource
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:49:17-51
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:58:17-51
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:48:17-67
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:57:17-67
 activity#com.cellfishpool.app.cameraml.ViewFaces
-ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:52:9-47
+ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:61:9-47
 	android:name
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml:52:19-44
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml:61:19-44
 uses-sdk
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:5:5-44
-MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-ml-vision:18.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/34390f34f6eb97da1230e300acb7b232/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-ml-vision:18.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/34390f34f6eb97da1230e300acb7b232/AndroidManifest.xml:6:5-44
-MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d1988b10e807fb748e01a805b2620a42/AndroidManifest.xml:7:5-9:41
-MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d1988b10e807fb748e01a805b2620a42/AndroidManifest.xml:7:5-9:41
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:6:5-8:41
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/f2ac09a8ead97ddd442adf1af5675e02/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/f2ac09a8ead97ddd442adf1af5675e02/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/c29376b06f68f8b02e4edc40a8a673b4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/c29376b06f68f8b02e4edc40a8a673b4/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a025bab74f302a5ebae9acf74e31f0b5/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a025bab74f302a5ebae9acf74e31f0b5/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/481c8a50fca0bcfe2822e07553adb0cc/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/481c8a50fca0bcfe2822e07553adb0cc/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ecc598b8919b7fdd9d7d7551b4846587/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ecc598b8919b7fdd9d7d7551b4846587/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d7da1283507374e6fdac882653de759/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d7da1283507374e6fdac882653de759/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a83420bb72de304f42438ac609895479/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a83420bb72de304f42438ac609895479/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/04d982aed47b61790d8938a07a091219/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/04d982aed47b61790d8938a07a091219/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-ml-common:16.1.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/3de3aadad65ae0c5a7334f2621764041/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-ml-common:16.1.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/3de3aadad65ae0c5a7334f2621764041/AndroidManifest.xml:6:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8f2190971c5d480df116f5a93a3b316f/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8f2190971c5d480df116f5a93a3b316f/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/667f3cbb80c9c29669a77c707740a9aa/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/667f3cbb80c9c29669a77c707740a9aa/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/1c6c6bf5361af38f6a27893e2d36e131/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/1c6c6bf5361af38f6a27893e2d36e131/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/a0a1d993b72d34fad42337a3315ecb6a/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/a0a1d993b72d34fad42337a3315ecb6a/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d955b7e935a481b139bd425ab5a1303/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d955b7e935a481b139bd425ab5a1303/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/0e1f2f9a95a108ebb05dded4783d4c85/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/0e1f2f9a95a108ebb05dded4783d4c85/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/22eb3f16e8759bb5d76b0911e0abc4f6/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/22eb3f16e8759bb5d76b0911e0abc4f6/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d25114709478c0ffe0df8a0d89ea1f8/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d25114709478c0ffe0df8a0d89ea1f8/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/dfd28d4fdea9e3534d505de97c76c546/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/dfd28d4fdea9e3534d505de97c76c546/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/15e5d48a445bbaacf74dc50435889bf6/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/15e5d48a445bbaacf74dc50435889bf6/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b120c2ac3cb45c16ed0f858ad1a77e2a/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b120c2ac3cb45c16ed0f858ad1a77e2a/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/3f00e5e8c75aed137a542e04377e6892/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/3f00e5e8c75aed137a542e04377e6892/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/c7d7c2534cdb58647d4b09f68210b22e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/c7d7c2534cdb58647d4b09f68210b22e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/3d088dbeaebd4cdc8e567f619e867bb5/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/3d088dbeaebd4cdc8e567f619e867bb5/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.d-max:spots-dialog:1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/233a3a177c9ad0fd5f607b82d066ea8d/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.d-max:spots-dialog:1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/233a3a177c9ad0fd5f607b82d066ea8d/AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/e67bf1aab68f8dea1944a3996b85ea37/AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/e67bf1aab68f8dea1944a3996b85ea37/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7b406b55e827c751db02a01a05e768ee/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7b406b55e827c751db02a01a05e768ee/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/50bc9c9b23bd5ca2744d585c1cbc1b6e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/50bc9c9b23bd5ca2744d585c1cbc1b6e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7f3134e4f21c7a6e59e171eb92b230a8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7f3134e4f21c7a6e59e171eb92b230a8/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/055ee25a68c1836805ce11e9e9b42c3a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/055ee25a68c1836805ce11e9e9b42c3a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/3b63f13d76f9de7253a37f49bbe37fcb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/3b63f13d76f9de7253a37f49bbe37fcb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/76fe1ae3e05095b7a1b7818622c21c5d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/76fe1ae3e05095b7a1b7818622c21c5d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/cb7eb3b353e5e4cd790cf1bea7cda6a9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/cb7eb3b353e5e4cd790cf1bea7cda6a9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ddba25ee38cbccc3e4af4a760fe02509/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ddba25ee38cbccc3e4af4a760fe02509/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/e232f2f53ecfeee70c0c2621a80dc0ee/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/e232f2f53ecfeee70c0c2621a80dc0ee/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b2e4fc204fc26d43b63971818a6168ba/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/b2e4fc204fc26d43b63971818a6168ba/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/fff3c845c8c85c7db9d758bb503d1a69/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/fff3c845c8c85c7db9d758bb503d1a69/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7a4f2001e809490c08f49b7de0263478/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/7a4f2001e809490c08f49b7de0263478/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ced0683c66b6fcb96612ad6ba43ea8cb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ced0683c66b6fcb96612ad6ba43ea8cb/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d91fa1c0f57f0ee91d21d831895432f2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/d91fa1c0f57f0ee91d21d831895432f2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a9ede2c50d5db62f23332035f16f088e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.0.2] /home/vartul/.gradle/caches/transforms-2/files-2.1/a9ede2c50d5db62f23332035f16f088e/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/b368a3c1091f1142eafdb1c2a06e9980/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/b368a3c1091f1142eafdb1c2a06e9980/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ba9e13289eeccc29f54129b502321be5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ba9e13289eeccc29f54129b502321be5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ac1f05244ae09f6a19113d55b5b0b712/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/ac1f05244ae09f6a19113d55b5b0b712/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/0580a200005acc5a2b3a6c30ce46ed80/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/0580a200005acc5a2b3a6c30ce46ed80/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/6ed072be873a9d8e5c8344dea405172a/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/6ed072be873a9d8e5c8344dea405172a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6355561af1f6a9f8ae06cc63a4f5cfb5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/6355561af1f6a9f8ae06cc63a4f5cfb5/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/b0c1e65ceeae9a6352c700ff72c69d17/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/b0c1e65ceeae9a6352c700ff72c69d17/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5ddd332d64eaa2914cfa25e1fbf5e71f/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5ddd332d64eaa2914cfa25e1fbf5e71f/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f951a1162cf2d929ce28fc96842a870/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/6f951a1162cf2d929ce28fc96842a870/AndroidManifest.xml:20:5-44
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:5:5-44
+MERGED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-ml-vision:18.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e9d07e8937eeb10280efc5bef3962827\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-ml-vision:18.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e9d07e8937eeb10280efc5bef3962827\AndroidManifest.xml:6:5-44
+MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f63a51eb25cf814369288097019630f9\AndroidManifest.xml:7:5-9:41
+MERGED from [me.rishabhkhanna:CustomToggle:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f63a51eb25cf814369288097019630f9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:6:5-8:41
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\7528728f598d94effe2fac1eaaf567d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\7528728f598d94effe2fac1eaaf567d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e0cb888c4744eafdc809e4757b843550\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e0cb888c4744eafdc809e4757b843550\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3996e58a5c8d8feb729f41b4c4687bef\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-ml-vision-face-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3996e58a5c8d8feb729f41b4c4687bef\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6a6c474f80897c2755d0c02335f93532\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-ml-vision-image-label-model:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6a6c474f80897c2755d0c02335f93532\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d8dffb761f73cf5d0ef65cfbdaa827e8\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d8dffb761f73cf5d0ef65cfbdaa827e8\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0e257ec953b88a8acf660af5bfa655d5\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0e257ec953b88a8acf660af5bfa655d5\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\68367390a72ee6e52d4a6d462877ac41\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-image-label:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\68367390a72ee6e52d4a6d462877ac41\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ea5bb58f22cdf1718df6ff26ab730127\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ea5bb58f22cdf1718df6ff26ab730127\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-ml-common:16.1.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\47b5847fb8db9a88c53cc6a4c72eafb0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-ml-common:16.1.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\47b5847fb8db9a88c53cc6a4c72eafb0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\1ff17dca2e31cbe329c825d7208b882f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\1ff17dca2e31cbe329c825d7208b882f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\09411570b5b6e5f8b73e00eec981c4ac\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\09411570b5b6e5f8b73e00eec981c4ac\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6e396693648cda099fef5b3f3e04479d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6e396693648cda099fef5b3f3e04479d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ce6725fae88ebf596ea1e3b0afea81bd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ce6725fae88ebf596ea1e3b0afea81bd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\4758b575bc43a1c355f41e7e94b2efe3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:16.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\4758b575bc43a1c355f41e7e94b2efe3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\18c2b57dbee0188a86c8dbae98773211\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\18c2b57dbee0188a86c8dbae98773211\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\be73d5e6cbf5e2ef0c93eca15772cf0f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\be73d5e6cbf5e2ef0c93eca15772cf0f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e3cefc339bf1b2b7724bbd70b9a2c10f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:16.0.5] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e3cefc339bf1b2b7724bbd70b9a2c10f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c8320a66f4d80fae5ac9119557a007bd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c8320a66f4d80fae5ac9119557a007bd\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\fde9f559aa5bf25ffd91f8b3fa8f5061\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\fde9f559aa5bf25ffd91f8b3fa8f5061\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0683feca163bf347cc060a181c3042db\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0683feca163bf347cc060a181c3042db\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9c6fcfc3e59f50690169e5abfe2f7b8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9c6fcfc3e59f50690169e5abfe2f7b8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\280d4732de0aeb0dd4c58918733ebc68\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\280d4732de0aeb0dd4c58918733ebc68\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\def7c1cc7bd72a192593dd97ac4c63b4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\def7c1cc7bd72a192593dd97ac4c63b4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.d-max:spots-dialog:1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aaee1ffc38b47f61c57cc74a01970dea\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.d-max:spots-dialog:1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aaee1ffc38b47f61c57cc74a01970dea\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e13fb557a226465ba9ed1d690e8e1ad5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e13fb557a226465ba9ed1d690e8e1ad5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\2f6df77beb4276b740b41bc00d5cf4c2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\2f6df77beb4276b740b41bc00d5cf4c2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\7e82e75c64d56ee8c0646052065c166e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\7e82e75c64d56ee8c0646052065c166e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\96be97d4a8ef53558dc3e1430501dce5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\96be97d4a8ef53558dc3e1430501dce5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\53877fa54423b33c1edc7f082633fa04\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\53877fa54423b33c1edc7f082633fa04\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\54a6fa8ef4c4d7c935665255fccc6901\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\54a6fa8ef4c4d7c935665255fccc6901\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\239e96b2a4b32083d235c0f82c75b8fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\239e96b2a4b32083d235c0f82c75b8fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\8804f5f4c4af835c6acf578713830c22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\8804f5f4c4af835c6acf578713830c22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ac58c23971c75d47d500bb9b3aeede4a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ac58c23971c75d47d500bb9b3aeede4a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\69f75e1cf4ad900768d1bb5a75448e1a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\69f75e1cf4ad900768d1bb5a75448e1a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0895820a6b8a5db99cf913f17af0f67d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0895820a6b8a5db99cf913f17af0f67d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3c43dec2a1e3ea3889ddb693a698157b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\3c43dec2a1e3ea3889ddb693a698157b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\bfe2f62ba9c2846daab967bf7116ee6d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\bfe2f62ba9c2846daab967bf7116ee6d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\082edad39e5ceb42498f9babcb23020b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\082edad39e5ceb42498f9babcb23020b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aeebc2fc985ccc68990220369c658e59\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\aeebc2fc985ccc68990220369c658e59\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0db14b55a991a359a6d47e0ff6f7221a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0db14b55a991a359a6d47e0ff6f7221a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e801306c4448551224f93a12207df727\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.0.2] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\e801306c4448551224f93a12207df727\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\5f4f4e5ea0ccc9861c78baee5712ef23\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\5f4f4e5ea0ccc9861c78baee5712ef23\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ab84383fd62f3ec13d73e7304ad593a1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\ab84383fd62f3ec13d73e7304ad593a1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d1a3944ccaed3f9c54f841bf1a4e2989\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d1a3944ccaed3f9c54f841bf1a4e2989\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d0b64b64a334efb7c2f1ef2c425adf6c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\d0b64b64a334efb7c2f1ef2c425adf6c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0feeffc77307d0f54bc1a9ad4697cc22\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0feeffc77307d0f54bc1a9ad4697cc22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6c33789430e78dfffccd801403925f3b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6c33789430e78dfffccd801403925f3b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\48030eaaf59e9971bcc009faad0f3c92\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\48030eaaf59e9971bcc009faad0f3c92\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6850030e40bbef64fe38a1b119330c79\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\6850030e40bbef64fe38a1b119330c79\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\34f00f80f10996f7ea2986222ad476bf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\34f00f80f10996f7ea2986222ad476bf\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-		ADDED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
-		INJECTED from /home/vartul/AndroidStudioProjects/Camera-ML/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Vartul Tripathi\AndroidStudioProjects\Camera-ML\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:8:5-71
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:12:5-71
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:12:5-71
+ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:8:5-71
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:12:5-71
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:12:5-71
 	android:name
-		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:8:22-68
+		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:8:22-68
 uses-feature#android.hardware.camera.front
-ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:14:5-16:36
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:18:5-20:36
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:18:5-20:36
+ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:14:5-16:36
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:18:5-20:36
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:18:5-20:36
 	android:required
-		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:16:9-33
+		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:16:9-33
 	android:name
-		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:15:9-53
+		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:15:9-53
 uses-feature#android.hardware.camera.autofocus
-ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:17:5-19:36
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:15:5-17:36
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:15:5-17:36
+ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:17:5-19:36
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:15:5-17:36
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:15:5-17:36
 	android:required
-		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:19:9-33
+		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:19:9-33
 	android:name
-		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:18:9-57
+		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:18:9-57
 uses-feature#android.hardware.microphone
-ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:20:5-22:36
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:21:5-23:36
-MERGED from [com.wonderkiln:camerakit:0.13.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/01eacb629b4174d555a4df3213de886b/AndroidManifest.xml:21:5-23:36
+ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:20:5-22:36
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:21:5-23:36
+MERGED from [com.wonderkiln:camerakit:0.13.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\9a4cb0a582bb0772c0ea84616095e11c\AndroidManifest.xml:21:5-23:36
 	android:required
-		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:22:9-33
+		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:22:9-33
 	android:name
-		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] /home/vartul/.gradle/caches/transforms-2/files-2.1/4264e3d1498b6fcddb7c5a7a03b0ee08/AndroidManifest.xml:21:9-51
+		ADDED from [com.camerakit:camerakit:1.0.0-beta3.10] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\c1ec41e777be2f11fee72014219d5baa\AndroidManifest.xml:21:9-51
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:22:5-79
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:23:22-76
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:23:22-76
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:24:5-68
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:24:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:24:22-65
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:24:22-65
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:29:9-35:19
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:29:9-35:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:31:13-37
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:27:18-89
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:27:18-89
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:28:13-30:85
+ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:28:13-30:85
 	android:value
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:30:17-82
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:30:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/2d7dc8231d1d6e958477831cf3bc3cd9/AndroidManifest.xml:29:17-139
+		ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\976c5d74fca9428d6e3855d13d61888d\AndroidManifest.xml:29:17-139
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:26:5-110
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:26:5-110
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:26:5-110
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:26:5-110
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:26:22-107
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:29:9-33:20
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:31:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:32:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:30:13-85
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:30:13-85
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:34:9-42:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] /home/vartul/.gradle/caches/transforms-2/files-2.1/4f75036802f06a32902ca76ce28d90b3/AndroidManifest.xml:29:9-37:20
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.4] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\0cc1b6e08b47cd61a259bf28ca427598\AndroidManifest.xml:29:9-37:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:36:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:36:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:37:13-36
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:37:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:38:13-69
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:38:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:35:13-100
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:35:13-100
 intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:39:13-41:29
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:39:13-41:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:40:17-79
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:40:17-79
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:40:25-76
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:40:25-76
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:44:9-47:40
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:44:9-47:40
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:46:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:46:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:47:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:45:13-84
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:45:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:48:9-52:72
+ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:48:9-52:72
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:50:13-35
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:50:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:51:13-37
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:51:13-37
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:52:13-69
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:52:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:16.0.6] /home/vartul/.gradle/caches/transforms-2/files-2.1/86a5fd0dd8fe45d391554efc3d0eb7e4/AndroidManifest.xml:49:13-87
+		ADDED from [com.google.firebase:firebase-analytics:16.0.6] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\dbc71f37ab567cd63158c9ca6610c771\AndroidManifest.xml:49:13-87
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:26:5-82
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:26:22-79
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:26:22-79
 meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:32:13-34:85
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:32:13-34:85
 	android:value
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:34:17-82
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:34:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:33:17-96
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:33:17-96
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:37:9-44:20
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:37:9-44:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:39:13-36
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:39:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:40:13-73
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:40:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:38:13-78
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:38:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:41:13-43:29
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:41:13-43:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:42:17-81
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:42:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:42:25-78
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:42:25-78
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:50:9-56:19
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:50:9-56:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:52:13-36
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:51:13-77
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:51:13-77
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:53:13-55:29
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:53:13-55:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:53:28-51
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:53:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:54:17-80
+ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:54:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/20ed22bb9402e0be665a51977ac12289/AndroidManifest.xml:54:25-77
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\66232b12148f78ae011c6e1cd9924a0d\AndroidManifest.xml:54:25-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\eea2d35e6938473d0d80d8e147b0bd75\AndroidManifest.xml:24:13-79
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:10:9-14:39
+ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:10:9-14:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:12:13-72
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:12:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:13:13-37
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:13:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:14:13-36
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:14:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:16.0.3] /home/vartul/.gradle/caches/transforms-2/files-2.1/61d9f5e168323a8848ddbc20aeab714b/AndroidManifest.xml:11:13-77
+		ADDED from [com.google.firebase:firebase-common:16.0.3] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\17cbbff44dc7cf28e0a66a153699253f\AndroidManifest.xml:11:13-77
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\Vartul Tripathi\.gradle\caches\transforms-2\files-2.1\f4a72f785c904a588cbd77ea4b613a1b\AndroidManifest.xml:24:13-58

@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/vartul/AndroidStudioProjects/Camera-ML/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "C:\\Users\\Vartul Tripathi\\AndroidStudioProjects\\Camera-ML\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/f2ac09a8ead97ddd442adf1af5675e02/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/c7d7c2534cdb58647d4b09f68210b22e/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\280d4732de0aeb0dd4c58918733ebc68\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\7528728f598d94effe2fac1eaaf567d3\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

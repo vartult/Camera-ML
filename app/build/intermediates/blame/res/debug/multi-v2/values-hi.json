@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/vartul/AndroidStudioProjects/Camera-ML/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
+            "outputFile": "C:\\Users\\Vartul Tripathi\\AndroidStudioProjects\\Camera-ML\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/f2ac09a8ead97ddd442adf1af5675e02/res/values-hi/values-hi.xml",
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\7528728f598d94effe2fac1eaaf567d3\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/8d5f41536419f7a7eacca523c5fa7ffe/res/values-hi/values.xml",
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\eea2d35e6938473d0d80d8e147b0bd75\\res\\values-hi\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,351,543,667,777,987,1115,1253,1390,1606,1713,1910,2038,2238,2417,2506,2599",
+                        "endColumns": "105,191,123,109,209,127,137,136,215,106,196,127,199,178,88,92,112",
+                        "endOffsets": "350,542,666,776,986,1114,1252,1389,1605,1712,1909,2037,2237,2416,2505,2598,2711"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2812,2922,3114,3242,3356,3566,3698,3840,4186,4402,4513,4710,4842,5042,5225,5318,5415",
+                        "endColumns": "109,191,127,113,209,131,141,140,215,110,196,131,199,182,92,96,116",
+                        "endOffsets": "2917,3109,3237,3351,3561,3693,3835,3976,4397,4508,4705,4837,5037,5220,5313,5410,5527"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\f4a72f785c904a588cbd77ea4b613a1b\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/6f3b2c6110fa74a5e0e6ad2f6a835491/res/values-hi/values-hi.xml",
+                    "source": "C:\\Users\\Vartul Tripathi\\.gradle\\caches\\transforms-2\\files-2.1\\082edad39e5ceb42498f9babcb23020b\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,23 +69,6 @@
                         "startOffsets": "5612",
                         "endColumns": "100",
                         "endOffsets": "5708"
-                    }
-                },
-                {
-                    "source": "/home/vartul/.gradle/caches/transforms-2/files-2.1/5d6a3295c28dac8f038eee730c019bf1/res/values-hi/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,351,543,667,777,987,1115,1253,1390,1606,1713,1910,2038,2238,2417,2506,2599",
-                        "endColumns": "105,191,123,109,209,127,137,136,215,106,196,127,199,178,88,92,112",
-                        "endOffsets": "350,542,666,776,986,1114,1252,1389,1605,1712,1909,2037,2237,2416,2505,2598,2711"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2812,2922,3114,3242,3356,3566,3698,3840,4186,4402,4513,4710,4842,5042,5225,5318,5415",
-                        "endColumns": "109,191,127,113,209,131,141,140,215,110,196,131,199,182,92,96,116",
-                        "endOffsets": "2917,3109,3237,3351,3561,3693,3835,3976,4397,4508,4705,4837,5037,5220,5313,5410,5527"
                     }
                 }
             ]

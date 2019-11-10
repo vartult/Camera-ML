@@ -4,6 +4,8 @@ package com.cellfishpool.app.cameraml;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -14,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -53,14 +56,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 opencamera();
-                //pehele wala method
-//                if(allPermissionsGranted()){
-//                    Intent select=new Intent(MainActivity.this,Select.class);
-//                    select.putExtra("flag",1);
-//                    startActivityForResult(select,REQUEST_CODE);
-//                }
-//                else
-//                    getRuntimePermissions();
+
+                    Intent select=new Intent(MainActivity.this,Select.class);
+                    select.putExtra("link",imageFilePath);
+                    select.putExtra("flag",1);
+                    startActivityForResult(select,REQUEST_CODE);
+
 
 
             }
@@ -83,16 +84,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 opencamera();
-//                if(allPermissionsGranted()) {
-//
-//                    Intent select = new Intent(MainActivity.this, Select.class);
-//                    select.putExtra("flag", 3);
-//                    startActivityForResult(select, REQUEST_CODE);
-//                }
-//                else{
-//                    getRuntimePermissions();
-//
-//                }
+
+
+                    Intent select = new Intent(MainActivity.this, Select.class);
+                select.putExtra("link",imageFilePath);
+                    select.putExtra("flag", 3);
+                    startActivityForResult(select, REQUEST_CODE);
+
             }
         });
 
@@ -101,15 +99,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 opencamera();
-//                if(allPermissionsGranted()) {
-//
-//                    Intent select = new Intent(MainActivity.this, Select.class);
-//                    select.putExtra("flag", 4);
-//                    startActivityForResult(select, REQUEST_CODE);
-//                }
-//                else{
-//                    getRuntimePermissions();
-//                }
+      Intent select = new Intent(MainActivity.this, Select.class);
+                select.putExtra("link",imageFilePath);
+                    select.putExtra("flag", 4);
+                    startActivityForResult(select, REQUEST_CODE);
+
             }
         });
     }
@@ -184,11 +178,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void executeAfterPermission(){
-        Intent intent = getIntent();
-        flag = intent.getIntExtra("flag", 0);
-
-
-
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             Log.i("flagggggg", String.valueOf(flag));
@@ -216,4 +205,81 @@ public class MainActivity extends AppCompatActivity {
 
         return image;
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 100 && resultCode == RESULT_OK) {
+            //Bitmap picture = (Bitmap) data.getExtras().get("data");
+            //picture.setPixel(5312,2988,1);
+            //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
+            //picture=decodeFile(imageFilePath);
+
+            Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
+
+            Pair<Integer, Integer> targetedSize = getTargetedWidthHeight();
+
+            int targetWidth = targetedSize.first;
+            int maxHeight = targetedSize.second;
+
+
+            // Determine how much to scale down the image
+
+            try {
+                float scaleFactor =
+                        Math.max(
+                                (float) picture.getWidth() / (float) targetWidth,
+                                (float) picture.getHeight() / (float) maxHeight);
+
+
+                picture =
+                        Bitmap.createScaledBitmap(
+                                picture,
+                                (int) (picture.getWidth() / scaleFactor),
+                                (int) (picture.getHeight() / scaleFactor),
+                                false);
+            }catch (NullPointerException e){
+                /*Toast.makeText(getBaseContext(), "No data found please try again", Toast.LENGTH_LONG).show();
+                Intent select = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(select);*/
+            }
+
+            private Integer getImageMaxWidth() {
+                if (mImageMaxWidth == null) {
+                    // Calculate the max width in portrait mode. This is done lazily since we need to
+                    // wait for
+                    // a UI layout pass to get the right values. So delay it to first time image
+                    // rendering time.
+                    mImageMaxWidth = imageView.getWidth();
+                }
+
+                return mImageMaxWidth;
+            }
+
+            // Returns max image height, always for portrait mode. Caller needs to swap width / height for
+            // landscape mode.
+            private Integer getImageMaxHeight() {
+                if (mImageMaxHeight == null) {
+                    // Calculate the max width in portrait mode. This is done lazily since we need to
+                    // wait for
+                    // a UI layout pass to get the right values. So delay it to first time image
+                    // rendering time.
+                    mImageMaxHeight =
+                            imageView.getHeight();
+                }
+
+                return mImageMaxHeight;
+            }
+
+            // Gets the targeted width / height.
+            private Pair<Integer, Integer> getTargetedWidthHeight() {
+                int targetWidth;
+                int targetHeight;
+                int maxWidthForPortraitMode = getImageMaxWidth();
+                int maxHeightForPortraitMode = getImageMaxHeight();
+                targetWidth = maxWidthForPortraitMode;
+                targetHeight = maxHeightForPortraitMode;
+                return new Pair<>(targetWidth, targetHeight);
+            }
 }

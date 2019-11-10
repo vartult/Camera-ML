@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:outlineAmbientShadowColor="@color/colorAccent">
 
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/content"
-        android:layout_width="332dp"
-        android:layout_height="64dp"
+        android:layout_width="305dp"
+        android:layout_height="65dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
@@ -23,8 +23,10 @@
         android:textSize="50px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/copy"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
 
@@ -35,7 +37,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/copycopy" />
+        app:srcCompat="@drawable/copy" />
 
 
 </android.support.constraint.ConstraintLayout>

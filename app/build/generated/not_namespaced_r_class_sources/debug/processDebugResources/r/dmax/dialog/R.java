@@ -20,7 +20,7 @@ public final class R {
     public static final class color {
         private color() {}
 
-        public static final int spots_dialog_color = 0x7f04005e;
+        public static final int spots_dialog_color = 0x7f04005f;
     }
     public static final class dimen {
         private dimen() {}

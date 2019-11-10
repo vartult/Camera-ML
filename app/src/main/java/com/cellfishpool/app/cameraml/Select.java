@@ -61,6 +61,9 @@ public class Select extends AppCompatActivity {
         viewall = findViewById(R.id.viewall);
         click = findViewById(R.id.click);
 
+        Intent intent = getIntent();
+        flag = intent.getIntExtra("flag", 0);
+        imageFilePath=intent.getStringExtra("link");
 
         click.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,98 +170,7 @@ public class Select extends AppCompatActivity {
         }
 
     }
-
-//    public void executeAfterPermission(){
-//            Intent intent = getIntent();
-//            flag = intent.getIntExtra("flag", 0);
-//
-//
-//
-//            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-//                Log.i("flagggggg", String.valueOf(flag));
-//                 //photoFile = null;
-//                try {
-//                    Log.i("new file","new file created");
-//                    photoFile = createImageFile();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                    return;
-//                }
-//                Uri photoUri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", photoFile);
-//                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-//                startActivityForResult(takePictureIntent, 100);
-//            }
-//
-//    }
-//    private boolean allPermissionsGranted() {
-//        for (String permission : getRequiredPermissions()) {
-//            if (!isPermissionGranted(this, permission)) {
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
-//    private void getRuntimePermissions() {
-//        List allNeededPermissions = new ArrayList<>();
-//        for (String permission : getRequiredPermissions()) {
-//            if (!isPermissionGranted(this, permission)) {
-//                allNeededPermissions.add(permission);
-//            }
-//        }
-//
-//        if (!allNeededPermissions.isEmpty()) {
-//            ActivityCompat.requestPermissions(
-//                    this, (String[]) allNeededPermissions.toArray(new String[0]), PERMISSION_REQUESTS);
-//        }
-//    }
-//    private String[] getRequiredPermissions() {
-//        try {
-//            PackageInfo info =
-//                    this.getPackageManager()
-//                            .getPackageInfo(this.getPackageName(), PackageManager.GET_PERMISSIONS);
-//            String[] ps = info.requestedPermissions;
-//            if (ps != null && ps.length > 0) {
-//                return ps;
-//            } else {
-//                return new String[0];
-//            }
-//        } catch (Exception e) {
-//            return new String[0];
-//        }
-//    }
-//
-//    public void onRequestPermissionsResult(
-//            int requestCode, String[] permissions, int[] grantResults) {
-//        if (allPermissionsGranted()) {
-//            Intent intent = getIntent();
-//            flag = intent.getIntExtra("flag", 0);
-//            /*Log.i("flagggggg111111111", String.valueOf(flag));
-//            Intent cameraIntent = new Intent((MediaStore.ACTION_IMAGE_CAPTURE));
-//            startActivityForResult(cameraIntent, 100);*/
-//        }
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//    }
-
-//    private static boolean isPermissionGranted(Context context, String permission) {
-//        if (ContextCompat.checkSelfPermission(context, permission)
-//                == PackageManager.PERMISSION_GRANTED) {
-//            return true;
-//        }
-//        return false;
-//    }
-
-//    private File createImageFile() throws IOException{
-//
-//        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
-//        String imageFileName = "IMG_" + timeStamp + "_";
-//        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-//        File image = File.createTempFile(imageFileName, ".jpg", storageDir);
-//        imageFilePath = image.getAbsolutePath();
-//
-//        return image;
-//    }
-
+    
     private Integer getImageMaxWidth() {
         if (mImageMaxWidth == null) {
             // Calculate the max width in portrait mode. This is done lazily since we need to

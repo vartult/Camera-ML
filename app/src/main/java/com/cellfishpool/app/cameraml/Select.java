@@ -64,24 +64,6 @@ public class Select extends AppCompatActivity {
         Intent intent = getIntent();
         flag = intent.getIntExtra("flag", 0);
         imageFilePath=intent.getStringExtra("link");
-
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                words = new ArrayList<>();
-//                if(allPermissionsGranted()){
-                    //executeAfterPermission();
-//
-//                }
-//                else {
-//                    getRuntimePermissions();
-//                    if(allPermissionsGranted())
-//                        executeAfterPermission();
-//                }
-            }
-});
-
-
     }
 
 
@@ -90,10 +72,6 @@ public class Select extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 100 && resultCode == RESULT_OK) {
-            //Bitmap picture = (Bitmap) data.getExtras().get("data");
-           //picture.setPixel(5312,2988,1);
-            //picture = BitmapFactory.decodeResource(getResources(),R.drawable.);
-            //picture=decodeFile(imageFilePath);
 
             Bitmap picture = BitmapFactory.decodeFile(imageFilePath);
 
@@ -123,17 +101,7 @@ public class Select extends AppCompatActivity {
                 Intent select = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(select);*/
             }
-            /*Integer result=0;
-            try {
-                result=getRotationCompensation("my_camera_id",getParent(), getApplicationContext());
-            } catch (CameraAccessException e) {
-                e.printStackTrace();
-            }
-            Matrix matrix = new Matrix();
 
-            matrix.postRotate(result);
-
-            picture = Bitmap.createBitmap(picture, 0, 0, picture.getWidth(), picture.getHeight(), matrix, true);*/
 
             imageView.setImageBitmap(picture);
 
@@ -170,7 +138,7 @@ public class Select extends AppCompatActivity {
         }
 
     }
-    
+
     private Integer getImageMaxWidth() {
         if (mImageMaxWidth == null) {
             // Calculate the max width in portrait mode. This is done lazily since we need to
@@ -207,51 +175,6 @@ public class Select extends AppCompatActivity {
         targetWidth = maxWidthForPortraitMode;
         targetHeight = maxHeightForPortraitMode;
         return new Pair<>(targetWidth, targetHeight);
-    }
-
-
-
-
-
-    //CAMERA ROTATION
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private int getRotationCompensation(String cameraId, Activity activity, Context context)
-            throws CameraAccessException {
-        // Get the device's current rotation relative to its "native" orientation.
-        // Then, from the ORIENTATIONS table, look up the angle the image must be
-        // rotated to compensate for the device's rotation.
-        int deviceRotation = activity.getWindowManager().getDefaultDisplay().getRotation();
-        int rotationCompensation = getResources().getConfiguration().orientation;
-
-        // On most devices, the sensor orientation is 90 degrees, but for some
-        // devices it is 270 degrees. For devices with a sensor orientation of
-        // 270, rotate the image an additional 180 ((270 + 270) % 360) degrees.
-        CameraManager cameraManager = (CameraManager) context.getSystemService(CAMERA_SERVICE);
-        int sensorOrientation = cameraManager
-                .getCameraCharacteristics(cameraId)
-                .get(CameraCharacteristics.SENSOR_ORIENTATION);
-        rotationCompensation = (rotationCompensation + sensorOrientation + 270) % 360;
-
-        // Return the corresponding FirebaseVisionImageMetadata rotation value.
-        int result;
-        switch (rotationCompensation) {
-            case 0:
-                result = FirebaseVisionImageMetadata.ROTATION_0;
-                break;
-            case 90:
-                result = FirebaseVisionImageMetadata.ROTATION_90;
-                break;
-            case 180:
-                result = FirebaseVisionImageMetadata.ROTATION_180;
-                break;
-            case 270:
-                result = FirebaseVisionImageMetadata.ROTATION_270;
-                break;
-            default:
-                result = FirebaseVisionImageMetadata.ROTATION_0;
-        }
-        return result;
     }
 
 }

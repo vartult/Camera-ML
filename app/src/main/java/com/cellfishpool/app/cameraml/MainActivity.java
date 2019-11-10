@@ -30,11 +30,14 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    File photoFile=new File(String.valueOf(Uri.parse("android.resource://com.cellfishpool.app.cameraml/drawable/copy")));
+    private Integer mImageMaxWidth;
+    // Max height (portrait mode)
+    private Integer mImageMaxHeight;
+    File photoFile = new File(String.valueOf(Uri.parse("android.resource://com.cellfishpool.app.cameraml/drawable/copy")));
     private static final int PERMISSION_REQUESTS = 1;
     int flag;
-    Button btnText,btnImage,btnFaces,btnBarcode;
-    int REQUEST_CODE=12;
+    Button btnText, btnImage, btnFaces, btnBarcode;
+    int REQUEST_CODE = 12;
     ImageView imageView;
     private String imageFilePath = "";
 
@@ -43,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnText=findViewById(R.id.btnText);
-        btnBarcode=findViewById(R.id.btnBarcode);
-        btnFaces=findViewById(R.id.btnFaces);
+        btnText = findViewById(R.id.btnText);
+        btnBarcode = findViewById(R.id.btnBarcode);
+        btnFaces = findViewById(R.id.btnFaces);
 
-        if(!allPermissionsGranted())
+        if (!allPermissionsGranted())
             getRuntimePermissions();
         //btnImage=findViewById(R.id.btnImages);
 
@@ -57,11 +60,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 opencamera();
 
-                    Intent select=new Intent(MainActivity.this,Select.class);
-                    select.putExtra("link",imageFilePath);
-                    select.putExtra("flag",1);
-                    startActivityForResult(select,REQUEST_CODE);
-
+                Intent select = new Intent(MainActivity.this, Select.class);
+                select.putExtra("link", imageFilePath);
+                select.putExtra("flag", 1);
+                startActivityForResult(select, REQUEST_CODE);
 
 
             }
@@ -86,10 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 opencamera();
 
 
-                    Intent select = new Intent(MainActivity.this, Select.class);
-                select.putExtra("link",imageFilePath);
-                    select.putExtra("flag", 3);
-                    startActivityForResult(select, REQUEST_CODE);
+                Intent select = new Intent(MainActivity.this, Select.class);
+                select.putExtra("link", imageFilePath);
+                select.putExtra("flag", 3);
+                startActivityForResult(select, REQUEST_CODE);
 
             }
         });
@@ -99,23 +101,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 opencamera();
-      Intent select = new Intent(MainActivity.this, Select.class);
-                select.putExtra("link",imageFilePath);
-                    select.putExtra("flag", 4);
-                    startActivityForResult(select, REQUEST_CODE);
+                Intent select = new Intent(MainActivity.this, Select.class);
+                select.putExtra("link", imageFilePath);
+                select.putExtra("flag", 4);
+                startActivityForResult(select, REQUEST_CODE);
 
             }
         });
     }
 
     private void opencamera() {
-        if(allPermissionsGranted()){
+        if (allPermissionsGranted()) {
             executeAfterPermission();
 
-        }
-        else {
+        } else {
             getRuntimePermissions();
-            if(allPermissionsGranted())
+            if (allPermissionsGranted())
                 executeAfterPermission();
         }
     }
@@ -128,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
     private void getRuntimePermissions() {
         List allNeededPermissions = new ArrayList<>();
         for (String permission : getRequiredPermissions()) {
@@ -141,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                     this, (String[]) allNeededPermissions.toArray(new String[0]), PERMISSION_REQUESTS);
         }
     }
+
     private String[] getRequiredPermissions() {
         try {
             PackageInfo info =
@@ -177,13 +180,13 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    public void executeAfterPermission(){
+    public void executeAfterPermission() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             Log.i("flagggggg", String.valueOf(flag));
             //photoFile = null;
             try {
-                Log.i("new file","new file created");
+                Log.i("new file", "new file created");
                 photoFile = createImageFile();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -195,7 +198,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    private File createImageFile() throws IOException{
+
+    private File createImageFile() throws IOException {
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
         String imageFileName = "IMG_" + timeStamp + "_";
@@ -239,47 +243,49 @@ public class MainActivity extends AppCompatActivity {
                                 (int) (picture.getWidth() / scaleFactor),
                                 (int) (picture.getHeight() / scaleFactor),
                                 false);
-            }catch (NullPointerException e){
+            } catch (NullPointerException e) {
                 /*Toast.makeText(getBaseContext(), "No data found please try again", Toast.LENGTH_LONG).show();
                 Intent select = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(select);*/
             }
+        }
+    }
 
-            private Integer getImageMaxWidth() {
-                if (mImageMaxWidth == null) {
-                    // Calculate the max width in portrait mode. This is done lazily since we need to
-                    // wait for
-                    // a UI layout pass to get the right values. So delay it to first time image
-                    // rendering time.
-                    mImageMaxWidth = imageView.getWidth();
-                }
+    private Integer getImageMaxWidth () {
+        if (mImageMaxWidth == null) {
+            // Calculate the max width in portrait mode. This is done lazily since we need to
+            // wait for
+            // a UI layout pass to get the right values. So delay it to first time image
+            // rendering time.
+            mImageMaxWidth = imageView.getWidth();
+        }
 
-                return mImageMaxWidth;
-            }
+        return mImageMaxWidth;
+    }
 
-            // Returns max image height, always for portrait mode. Caller needs to swap width / height for
-            // landscape mode.
-            private Integer getImageMaxHeight() {
-                if (mImageMaxHeight == null) {
-                    // Calculate the max width in portrait mode. This is done lazily since we need to
-                    // wait for
-                    // a UI layout pass to get the right values. So delay it to first time image
-                    // rendering time.
-                    mImageMaxHeight =
-                            imageView.getHeight();
-                }
+    // Returns max image height, always for portrait mode. Caller needs to swap width / height for
+    // landscape mode.
+    private Integer getImageMaxHeight () {
+        if (mImageMaxHeight == null) {
+            // Calculate the max width in portrait mode. This is done lazily since we need to
+            // wait for
+            // a UI layout pass to get the right values. So delay it to first time image
+            // rendering time.
+            mImageMaxHeight =
+                    imageView.getHeight();
+        }
 
-                return mImageMaxHeight;
-            }
+        return mImageMaxHeight;
+    }
 
-            // Gets the targeted width / height.
-            private Pair<Integer, Integer> getTargetedWidthHeight() {
-                int targetWidth;
-                int targetHeight;
-                int maxWidthForPortraitMode = getImageMaxWidth();
-                int maxHeightForPortraitMode = getImageMaxHeight();
-                targetWidth = maxWidthForPortraitMode;
-                targetHeight = maxHeightForPortraitMode;
-                return new Pair<>(targetWidth, targetHeight);
-            }
+    // Gets the targeted width / height.
+    private Pair<Integer, Integer> getTargetedWidthHeight(){
+        int targetWidth;
+        int targetHeight;
+        int maxWidthForPortraitMode = getImageMaxWidth();
+        int maxHeightForPortraitMode = getImageMaxHeight();
+        targetWidth = maxWidthForPortraitMode;
+        targetHeight = maxHeightForPortraitMode;
+        return new Pair<>(targetWidth, targetHeight);
+    }
 }

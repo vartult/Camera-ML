@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private Integer mImageMaxHeight;
     File photoFile = new File(String.valueOf(Uri.parse("android.resource://com.cellfishpool.app.cameraml/drawable/copy")));
     private static final int PERMISSION_REQUESTS = 1;
-    int flag;
+    int flag=0;
     Button btnText, btnImage, btnFaces, btnBarcode;
     int REQUEST_CODE = 12;
     ImageView imageView;
@@ -58,12 +58,10 @@ public class MainActivity extends AppCompatActivity {
         btnText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                flag=1;
                 opencamera();
 
-                Intent select = new Intent(MainActivity.this, Select.class);
-                select.putExtra("link", imageFilePath);
-                select.putExtra("flag", 1);
-                startActivityForResult(select, REQUEST_CODE);
+
 
 
             }
@@ -85,13 +83,14 @@ public class MainActivity extends AppCompatActivity {
         btnFaces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                flag=3;
                 opencamera();
 
 
-                Intent select = new Intent(MainActivity.this, Select.class);
-                select.putExtra("link", imageFilePath);
-                select.putExtra("flag", 3);
-                startActivityForResult(select, REQUEST_CODE);
+//                Intent select = new Intent(MainActivity.this, Select.class);
+//                select.putExtra("link", imageFilePath);
+//                select.putExtra("flag", 3);
+//                startActivityForResult(select, REQUEST_CODE);
 
             }
         });
@@ -100,11 +99,12 @@ public class MainActivity extends AppCompatActivity {
         btnBarcode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                flag=4;
                 opencamera();
-                Intent select = new Intent(MainActivity.this, Select.class);
-                select.putExtra("link", imageFilePath);
-                select.putExtra("flag", 4);
-                startActivityForResult(select, REQUEST_CODE);
+//                Intent select = new Intent(MainActivity.this, Select.class);
+//                select.putExtra("link", imageFilePath);
+//                select.putExtra("flag", 4);
+//                startActivityForResult(select, REQUEST_CODE);
 
             }
         });
@@ -248,7 +248,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent select = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(select);*/
             }
+
+            Intent select = new Intent(MainActivity.this, Select.class);
+            select.putExtra("link", imageFilePath);
+            select.putExtra("flag", flag);
+            startActivityForResult(select, REQUEST_CODE);
         }
+
     }
 
     private Integer getImageMaxWidth () {
